@@ -8,7 +8,7 @@ import {
 function ExampleHeader() {
     return (
         <ExampleWrapper>
-            <ExampleTitle>特色案例1:</ExampleTitle>
+            <ExampleTitle>特色案例:</ExampleTitle>
             <ExampleLink href="https://krpano.com/examples/?vtour">虚拟旅行</ExampleLink>
             <ExampleLink href="https://krpano.com/examples/?multires">高清 / 多尺度</ExampleLink>
             <ExampleLink href="https://krpano.com/examples/?panovideo">全景视频</ExampleLink>

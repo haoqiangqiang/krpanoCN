@@ -13,28 +13,28 @@ function Examples() {
         <Main>
             <LeftMenu>
                 <Link to='/examples/'>
-                <LeftMenuTitle>Examples</LeftMenuTitle>
+                <LeftMenuTitle>案例</LeftMenuTitle>
                 </Link>
                 <Link to='/examples/'>
-                <LeftMenuItem>Show All</LeftMenuItem>
+                <LeftMenuItem>全部</LeftMenuItem>
                 </Link>
                 <Link to='/examples/?depthmap'>
-                <LeftMenuItem>Depthmap</LeftMenuItem>
+                <LeftMenuItem>景深图案例</LeftMenuItem>
                 </Link>
                 <Link to='/examples/?js'>
-                <LeftMenuItem>Javascript</LeftMenuItem>
+                <LeftMenuItem>JS 案例</LeftMenuItem>
                 </Link>
                 <Link to='/examples/?multires'>
-                <LeftMenuItem>Multiresolution</LeftMenuItem>
+                <LeftMenuItem>高分辨路案例</LeftMenuItem>
                 </Link>
                 <Link to='/examples/?panovideo'>
-                <LeftMenuItem>Panoramic Video</LeftMenuItem>
+                <LeftMenuItem>全景视频案例</LeftMenuItem>
                 </Link>
                 <Link to='/examples/?vtour'>
-                <LeftMenuItem>Virtual Tours</LeftMenuItem>
+                <LeftMenuItem>虚拟游览案例</LeftMenuItem>
                 </Link>
                 <Link to='/examples/?webvr'>
-                <LeftMenuItem>WebVR</LeftMenuItem>
+                <LeftMenuItem>VR 案例</LeftMenuItem>
                 </Link>
             </LeftMenu>
             <Content>

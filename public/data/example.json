@@ -1,0 +1,30 @@
+{
+    "title": "example",
+    "data": [
+        {
+            "id": "a66158c9-1d12-4d48-8428-da99467290ec",
+            "title": "动画热点",
+            "type": "normal",
+            "imgUrl": "https://krpano.com/releases/1.20.9/examples/images/animated-hotspots.jpg",
+            "xml": [
+                {
+                    "id": "84b96cac-680e-4dce-98e7-b9968feff0c3",
+                    "title": "anihotspots.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.9/examples/../viewer/examples/animated-hotspots/anihotspots.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "099ef22e-e39f-42e6-b13c-a4b4adcb58e9",
+                    "content": "基于图片的动画热点。"
+                }, {
+                    "id": "ba7bc08d-9d91-49fe-8ed0-ee835f3f1d2e",
+                    "content": "这个案例展示了如何使用图像条或者精灵图来作为动态热点图片，图片通过 xml 脚本语言来动态的改变裁剪设置（“裁剪”图片的某个区域）来激活。"
+                }, {
+                    "id": "dd7e539b-86cf-4bb6-88c0-8f70a4d895b9",
+                    "content": "do_crop_animation <action> 在这个案例中没有任何的依赖项，可以很容易的被我们的案例复用。支持垂直，水平和平铺图像条，并从左上到右下来循环图像。每一帧的像素大小和理想的帧率需要作为参数来设置"
+                }
+            ]
+        }
+    ]
+}

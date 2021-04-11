@@ -22,7 +22,7 @@ export const MenuWrapper = styled.div`
     text-shadow: rgba(255,255,255,.5)1px 1px 3px;
 `
 
-export const MenuLink = styled.a`
+export const MenuLink = styled.span`
     display: inline-block;
     box-sizing: border-box;
     padding: 0 10px;

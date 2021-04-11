@@ -15,7 +15,7 @@ export const LeftMenu = styled.div`
     padding-right: 20px;
     text-align: right;
 `
-export const LeftMenuTitle = styled.a`
+export const LeftMenuTitle = styled.span`
     width: 100%;
     display: block;
     margin: 10px 0;
@@ -28,7 +28,7 @@ export const LeftMenuTitle = styled.a`
     outline: 0;
 `
 
-export const LeftMenuItem= styled.a`
+export const LeftMenuItem= styled.span`
     display: block;
     width: 100%;
     padding-bottom: 8px;

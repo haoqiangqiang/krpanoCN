@@ -8,10 +8,8 @@ const defaultState = {
 
 
 const getExampleData = (state, action) => {
-    console.log('action is', action);
     const returnState = _.cloneDeep(state);
     returnState.data = action.data;
-    console.log('returnState is', returnState);
     return returnState;
     // return state.merge({
     //     data: fromJS(action.data),

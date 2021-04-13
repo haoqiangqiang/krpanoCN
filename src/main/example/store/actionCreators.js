@@ -7,11 +7,8 @@ const getExampleData = (result) => ({
 });
 
 export const fetchExampleData = () => {
-    console.log('fetchExamplae');
     return (dispatch) => {
-        console.log('axios');
         axios.get('/data/example.json').then(res => {
-            console.log('res is', res);
             const result = res.data.data;
             dispatch(getExampleData(result));
         });

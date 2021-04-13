@@ -14,7 +14,6 @@ import {
 
 function Example(props) {
     const data = props.data;
-    console.log('daya is', data);
     return (
         <ExampleBlock>
             <ExampleTitle>{data.title}</ExampleTitle>

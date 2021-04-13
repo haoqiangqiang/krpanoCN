@@ -13,31 +13,15 @@ import { actionCreators } from './store';
 
 function Examples(props) {
     const data = useSelector(state => {
-        console.log('state is', state.example.data);
         return state.example.data;
     });
 
     const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //     console.log('app dispatch');
-    //     dispatch(actionCreators.fetchExampleData());
-    // })
+    useEffect(() => {
+        dispatch(actionCreators.fetchExampleData());
+    }, []);
 
-    // const getData = () => {
-    //     console.log(data);
-    //     dispatch({
-    //         type: actionCreators.fetchExampleData(),
-    //     })
-    // }
-
-    // const [type, setType] = useState('normal');
-    // let data;
-    
-    // useEffect(() => {
-    //     console.log('use', data);
-    //     // getData();
-    // })
     return (
         <Main>
             <LeftMenu>
@@ -67,22 +51,12 @@ function Examples(props) {
                 </Link>
             </LeftMenu>
             <Content>
-              {
-                   data.map((data) => <Example key={data.id} data={data}></Example>)
-               }    
+                {
+                    data.map((data) => <Example key={data.id} data={data}></Example>)
+                }
             </Content>
         </Main>
     );
 }
 
-// const mapState = (state) => ({
-//     data: state.example.get('data'),
-// })
-// const mapDispatch = (dispatch) => ({
-//     getExampleData() {
-//         dispatch(actionCreators.fetchExampleData());
-//     }
-// })
-
-// export default connect(mapState, mapDispatch)(Examples);
 export default Examples;

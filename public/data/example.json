@@ -4,7 +4,7 @@
         {
             "id": "a66158c9-1d12-4d48-8428-da99467290ec",
             "title": "动画热点",
-            "type": "normal",
+            "type": ["normal"],
             "imgUrl": "https://krpano.com/releases/1.20.9/examples/images/animated-hotspots.jpg",
             "xml": [
                 {
@@ -24,6 +24,36 @@
                     "id": "dd7e539b-86cf-4bb6-88c0-8f70a4d895b9",
                     "content": "do_crop_animation <action> 在这个案例中没有任何的依赖项，可以很容易的被我们的案例复用。支持垂直，水平和平铺图像条，并从左上到右下来循环图像。每一帧的像素大小和理想的帧率需要作为参数来设置"
                 }
+            ]
+        }, {
+            "id": "5bdb3c0c-898a-455d-b436-8ab2d6191131",
+            "title": "背景音乐",
+            "type": ["normal"],
+            "imgUrl": "https://krpano.com/releases/1.20.9/examples/images/backgroundsound.jpg",
+            "xml": [
+                {
+                    "id": "193cd341-695b-440f-9ed6-439120245c59",
+                    "title": "backgroundsound.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.9/examples/../viewer/examples/backgroundsound/backgroundsound.xml"
+                }
+            ],
+            "content": [
+                {
+                   "id": "68f5147a-3629-49ad-ba0b-df0392beed40",
+                   "content": "播放声音作为背景音乐。" 
+                },
+                {
+                    "id": "42bf204d-cd88-41e0-8382-518296081f2a",
+                    "content": "在这个例子里，soundinterface 插件会扩展 krpano 支持音乐u播放。" 
+                 },
+                 {
+                    "id": "bb5abe8b-2d16-40d0-8f6f-bc8b5ce91bf8",
+                    "content": "要仅为当前全景自动启动和停止背景声音（例如，当使用多个场景时），播放将由全景本地事件控制。" 
+                 },
+                 {
+                    "id": "0da5cd9c-5e12-4d03-83d8-cb62ca7a612f",
+                    "content": "此外，还包括一个小按钮，用于暂停和恢复声音。。" 
+                 }
             ]
         }
     ]

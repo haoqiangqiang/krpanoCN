@@ -30,7 +30,7 @@ export const XmlList = styled.div`
 `
 
 export const XmlItems = styled.ul`
-    display: inline-block;
+    display: inline-flex;
 `
 
 export const XmlItem = styled.li`

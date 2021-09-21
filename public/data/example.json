@@ -55,6 +55,67 @@
                     "content": "此外，还包括一个小按钮，用于暂停和恢复声音。。" 
                  }
             ]
+        }, {
+            "id": "5bdb3c0c-898a-455d-b436-8ab2d6191131",
+            "title": "混合案例",
+            "type": ["normal"],
+            "imgUrl": "https://krpano.com/releases/1.20.9/examples/images/blending-demo.jpg",
+            "xml": [
+                {
+                    "id": "f9c93b33-4165-414a-8628-17cf1172f7f3",
+                    "title": "blending-demo.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.9/examples/../viewer/examples/blending-demo/blending-demo.xml"
+                }
+            ],
+            "content": [
+                {
+                   "id": "823ab06a-789b-4dec-a686-708e6b988fab",
+                   "content": "webGL混合模型案例。" 
+                },
+                {
+                    "id": "4a4af9ea-66e5-43dc-b3d7-62ba77b342c6",
+                    "content": "这个示例演示了新的基于 webgl 的混合模式的可能性。不同的混合模式是 loadpano() / loadscene() 动作的混合参数的自定义设置。" 
+                 },
+                 {
+                    "id": "79d8ffaf-257c-4f41-b2c3-6e8b48db6884",
+                    "content": "除此之外，这个例子还展示了如何使用自定义 xml 结构(<blendmodes>元素是一个自定义的)，以及如何拖动图层和使用 scrollarea 插件。" 
+                 }
+            ]
+        }, {
+            "id": "126c8444-36ae-447d-85dc-e55797581cc7",
+            "title": "色度键蒙版",
+            "type": ["normal"],
+            "imgUrl": "https://krpano.com/releases/1.20.9/examples/images/chromakey.gif",
+            "xml": [
+                {
+                    "id": "3aa98358-1816-4d08-b73d-8737488dbc9f",
+                    "title": "example.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.9/examples/../viewer/examples/chromakey/example.xml"
+                },
+                {
+                    "id": "a1a5e048-6606-432a-8613-0d231811731e",
+                    "title": "chromakey_helper.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.9/examples/../viewer/examples/chromakey/chromakey_helper.xml"
+                }
+            ],
+            "content": [
+                {
+                   "id": "739d10cd-50a1-47ea-b995-bd01bff89cb4",
+                   "content": "色度键。" 
+                },
+                {
+                    "id": "be41688f-a25b-4245-966c-d11119f9c4db",
+                    "content": "使用 chromakey 设置图像或视频中的特定颜色可以用作alpha蒙版。。" 
+                 },
+                 {
+                    "id": "332b8b86-d1a8-4a3b-99f7-71e13a549989",
+                    "content": "使用chromakey设置图像或视频中的特定颜色可以用作alpha蒙版。典型的用法是 Greenscreen 或 Bluescreen 视频。" 
+                 },
+                 {
+                    "id": "4413ca62-7490-48e2-a647-841393dd6321",
+                    "content": "该示例包含一个帮助脚本，可以方便地为特定的图像或视频找到正确的设置。" 
+                 }
+            ]
         }
     ]
 }

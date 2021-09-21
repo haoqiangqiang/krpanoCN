@@ -8,7 +8,7 @@ import {
     Content,
     LeftMenuItem,
 } from '../style';
-import Example from '../../common/example_block';
+import Example from '../../../components/example_block/index';
 import { actionCreators } from './store';
 
 function Examples(props) {

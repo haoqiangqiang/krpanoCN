@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter, Redirect, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import ExampleHeader from './example_header';
-import Menu from './menu';
-import News from './main/news/news';
-import Examples from './main/example/examples';
+import ExampleHeader from './pages/example_header';
+import Menu from './pages/menu';
+import News from './pages/main/news/news';
+import Examples from './pages/main/example/examples';
 import { Globalstyle } from "./style";
 import './App.css';
 

@@ -56,7 +56,7 @@
                  }
             ]
         }, {
-            "id": "5bdb3c0c-898a-455d-b436-8ab2d6191131",
+            "id": "fe6e8c7b-2fba-5b95-c53d-3e601301f5b0",
             "title": "混合案例",
             "type": ["normal"],
             "imgUrl": "https://krpano.com/releases/1.20.9/examples/images/blending-demo.jpg",
@@ -105,7 +105,7 @@
                 },
                 {
                     "id": "be41688f-a25b-4245-966c-d11119f9c4db",
-                    "content": "使用 chromakey 设置图像或视频中的特定颜色可以用作alpha蒙版。。" 
+                    "content": "使用 chromakey 设置图像或视频中的特定颜色可以用作alpha蒙版。" 
                  },
                  {
                     "id": "332b8b86-d1a8-4a3b-99f7-71e13a549989",
@@ -114,6 +114,55 @@
                  {
                     "id": "4413ca62-7490-48e2-a647-841393dd6321",
                     "content": "该示例包含一个帮助脚本，可以方便地为特定的图像或视频找到正确的设置。" 
+                 }
+            ]
+        }, {
+            "id": "f0e2fc7d-d4e8-498c-bdd7-bb644e9dac82",
+            "title": "下拉列表框",
+            "type": ["normal"],
+            "imgUrl": "https://krpano.com/releases/1.20.9/examples/images/combobox.jpg",
+            "xml": [
+                {
+                    "id": "c3318c89-f999-4d9c-8581-57c37932b713",
+                    "title": "combobox-examples.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.9/examples/../viewer/examples/combobox/combobox-examples.xml"
+                },
+                {
+                    "id": "24604d73-08a1-4c8c-80a2-1ee242de3dcf",
+                    "title": "combobox.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.9/examples/../viewer/plugins/combobox.xml"
+                }
+            ],
+            "content": [
+                {
+                   "id": "1bac328d-c770-4cb7-abf4-3c49046f4d3b",
+                   "content": "下拉列表框插件案例" 
+                },
+                {
+                    "id": "35120cd5-c7e4-43b7-9552-427d5d0751da",
+                    "content": "使用新的 combobox.xml 插件的用法示例。这些示例展示了如何静态和动态地定义组合框元素，以及如何自定义设计。" 
+                 }
+            ]
+        }, {
+            "id": "498aa1f2-7afe-467e-9989-d648d29b54c0",
+            "title": "罗盘",
+            "type": ["normal"],
+            "imgUrl": "https://krpano.com/releases/1.20.9/examples/images/compass.jpg",
+            "xml": [
+                {
+                    "id": "14480ccd-3833-4bc8-baff-5ba145fd7a7f",
+                    "title": "compass.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.9/examples/../viewer/examples/compass/compass.xml"
+                }
+            ],
+            "content": [
+                {
+                   "id": "d393842c-f676-460a-98dd-51fd08e4a84c",
+                   "content": "罗盘-显示察看的方向" 
+                },
+                {
+                    "id": "6ba039f4-8f95-4efc-918f-3ca3bed99e18",
+                    "content": "这个例子将图像旋转到当前的观看方向。罗盘元素是由几个图层和图像构建而成的，其中一个图像将在察看方向改变时旋转。" 
                  }
             ]
         }

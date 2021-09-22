@@ -1,4 +1,3 @@
-import { fromJS } from 'immutable';
 import * as _ from 'lodash';
 import * as constants from './constants';
 

@@ -15,7 +15,6 @@ function Examples(props) {
     const data = useSelector(state => {
         return state.example.data;
     });
-
     const dispatch = useDispatch();
 
     useEffect(() => {

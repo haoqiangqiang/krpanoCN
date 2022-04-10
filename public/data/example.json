@@ -165,6 +165,30 @@
                     "content": "这个例子将图像旋转到当前的观看方向。罗盘元素是由几个图层和图像构建而成的，其中一个图像将在察看方向改变时旋转。" 
                  }
             ]
+        },
+        {
+            "id": "4d013456-1b62-49c5-8593-dceb933f52ab",
+            "title": "镜头控制方式",
+            "type": ["normal"],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/control-mode.jpg",
+            "xml": [
+                {
+                    "id": "439e4347-1fdb-4d92-bef9-22ed895bf35b",
+                    "title": "example.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/control-mode/example.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "30390a3a-03e3-41d4-8cd8-370dd95e13ab",
+                    "content": "一个展示不同基础控制模式的例子"
+                },
+                {
+                    "id": "8567f8fd-817d-47f6-b736-70a4348d3f13",
+                    "content": "可以通过调整<control>设置进行进一步的定制。"
+                }
+            ]
+
         }
     ]
 }

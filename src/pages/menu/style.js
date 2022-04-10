@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const MenuWrapper = styled.div`
     position: absolute;
     top: 60px;
-    bottom: 0;
     right: 0;
     padding-right: 4px;
     padding-bottom: 5px;

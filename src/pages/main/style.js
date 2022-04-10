@@ -10,7 +10,6 @@ export const Main = styled.div`
 `
 
 export const LeftMenu = styled.div`
-    width: 250px;
     margin: 20px 0;
     padding-right: 20px;
     text-align: right;
@@ -37,6 +36,5 @@ export const LeftMenuItem= styled.span`
 `
 
 export const Content = styled.div`
-    width: 650px;
-    height: 100px;
+    margin-bottom: 20px;
 `

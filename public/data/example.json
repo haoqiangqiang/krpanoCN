@@ -189,6 +189,56 @@
                 }
             ]
 
+        },
+        {
+            "id": "f0e2a99a-3876-4cbc-8bda-bcf322b0d0fc",
+            "title": "自定义右键菜单",
+            "type": ["normal"],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/custom-contextmenu.jpg",
+            "xml": [
+                {
+                    "id": "24cfbd75-a812-49f7-bf3b-572cb0f0459e",
+                    "title": "contextmenu.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/custom-contextmenu/contextmenu.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "cad3339c-7c4d-4400-b6b1-4923f7511848",
+                    "content": "设置自定义右键/触摸菜单。"
+                },
+                {
+                    "id": "61dc03e0-f0c9-4e1e-b9cc-7121ea7af3c6",
+                    "content": "本案例演示了如何设置一个自定义右键菜单，提供了更改控制模式和更改预览视角的选项。"
+                },
+                {
+                    "id": "2490bebd-aa67-46e4-ac38-16970aa0419e",
+                    "content": "该案例还演示了右键菜单里如何包含网页元素(例如图像)。"
+                }
+            ]
+        },
+        {
+            "id": "da9c0faa-dba4-4f7d-b981-17a9f1960392",
+            "title": "自定义磁贴链接",
+            "type": ["normal"],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/custom-tile-urls.jpg",
+            "xml": [
+                {
+                    "id": "2952f305-c72b-49ee-bc36-0a646d0670da",
+                    "title": "custom-tile-urls.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/custom-tile-urls/custom-tile-urls.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "8505e8cf-79de-49ff-8e2e-e9c5f8e60474",
+                    "content": "自定义磁贴链接"
+                },
+                {
+                    "id": "c9e27f8d-25bb-43b5-a253-56d434a399b8",
+                    "content": "这是一个小型的技术案例，演示了如何让使用 customParseTilePath API 来使用自定义磁贴链接。该案例将加载公共地图磁贴。"
+                }
+            ]
         }
     ]
 }

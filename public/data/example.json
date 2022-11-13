@@ -239,6 +239,344 @@
                     "content": "这是一个小型的技术案例，演示了如何让使用 customParseTilePath API 来使用自定义磁贴链接。该案例将加载公共地图磁贴。"
                 }
             ]
+        },
+        {
+            "id": "9059e0dd-6eb9-4f00-8e9f-3a9523eed1b5",
+            "title": "柱面网格化热点",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/cylinder-grid-hotspots.jpg",
+            "xml": [
+                {
+                    "id": "2474850e-a2d9-40ee-9284-6a3285d529fe",
+                    "title": "cylinder-grid-hotspots.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/cylinder-grid-hotspots/cylinder-grid-hotspots.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "9c304e71-f947-4d2b-adbc-33a9f94d7de8",
+                    "content": "这个例子展示了如何通过使用固定的像素大小作为偏移量(calc_spherical_offset)在柱面上生成和放置文本域热点。"
+                }
+            ]
+        },
+        {
+            "id": "7caa5468-2e69-4146-963d-e907199fda2a",
+            "title": "公寓游览案例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/demotour-apartment.jpg",
+            "xml": [
+                {
+                    "id": "ecf22595-a03d-4d44-9289-444b806d7be3",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-apartment/tour.xml"
+                },
+                {
+                    "id": "b59a77aa-3711-482e-ba45-cbcb443cb1d6",
+                    "title": "vtourskin.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-apartment/skin/vtourskin.xml"
+                },
+                {
+                    "id": "4fe8e217-3c6a-46ce-9364-66d5dbf003a1",
+                    "title": "webvr.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/webvr.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "95754e2e-f7ae-4a4f-8020-c25ce32f18c1",
+                    "content": "案例展示：空置蓝色公寓"
+                },
+                {
+                    "id": "7e4852cf-c84c-4e79-ab5c-199242fd8dd7",
+                    "content": "该案例首先通过 MAKE VTOUR 快捷批处理构建然后再手动修改完成。"
+                },
+                {
+                    "id": "70442996-c07b-4f67-885f-a03aa6ed5fb1",
+                    "content": "为了完成房间之间的导航使用了隐藏的多边形热点功能。"
+                },
+                {
+                    "id": "d0fccb75-3252-4cf4-b0ab-957bbb867131",
+                    "content": "在拼接过程中，所有的 panos 都对齐到相同的方向，以便在移动 panos 时使用 KEEPVIEW 标志保持相同的查看方向"
+                }
+            ]
+        },
+        {
+            "id": "07597dbd-eb3b-42e6-aec6-f06e71a51405",
+            "title": "科孚岛游览案例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/demotour-corfu.jpg",
+            "xml": [
+                {
+                    "id": "7ab88b24-b592-4072-96b8-c51dc697e09a",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/tour.xml"
+                },
+                {
+                    "id": "88a96e65-a531-4019-8382-d06d8f9c2e85",
+                    "title": "vtourskin.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/skin/vtourskin.xml"
+                },
+                {
+                    "id": "6083506d-cf56-4160-9fe2-c0c05ed3cc10",
+                    "title": "webvr.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/webvr.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "879a7722-6468-4bf0-ba2e-934b42080dc9",
+                    "content": "案例展示：科孚岛假日旅行"
+                },
+                {
+                    "id": "86b2173f-5360-4691-bb11-64b08e02ab67",
+                    "content": "使用 MAKE VTOUR(MULTIRES) 快捷批处理自动构建出默认的游览，然后通过滚动区和图像构建出手动的自定义地图导航。"
+                }
+            ]
+        },
+        {
+            "id": "60e52e39-3b38-449d-8cae-562374470f02",
+            "title": "科孚岛游览案例-携带蒙皮选择",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/demotour-corfu-skinselect.jpg",
+            "xml": [
+                {
+                    "id": "c0fc42be-3231-4ab3-b735-a3e0c4da134d",
+                    "title": "skinselect.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu-skinselect/skinselect.xml"
+                },
+                {
+                    "id": "22943f61-b59b-4958-b347-d59a3015e647",
+                    "title": "vtourskin_design_flat_light.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/skin/vtourskin_design_flat_light.xml"
+                },
+                {
+                    "id": "87295a23-5b96-4674-b7fd-1eb195ddc361",
+                    "title": "vtourskin_design_ultra_light.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/skin/vtourskin_design_ultra_light.xml"
+                },
+                {
+                    "id": "a72cb806-ff04-4de8-a428-1bb106da1825",
+                    "title": "vtourskin_design_glass.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/skin/vtourskin_design_glass.xml"
+                },
+                {
+                    "id": "b387e4a8-3783-4cdb-8386-3fa7601969a9",
+                    "title": "vtourskin_design_117.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/skin/vtourskin_design_117.xml"
+                },
+                {
+                    "id": "31a51e54-0621-46cb-ad6c-5b3917db0097",
+                    "title": "vtourskin_design_117round.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/skin/vtourskin_design_117round.xml"
+                },
+                {
+                    "id": "7c25bb42-502b-44fc-9ebe-3f372fbcee72",
+                    "title": "vtourskin_design_black.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/skin/vtourskin_design_117round.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "1bf7fc17-33a9-4260-b6eb-468864297f98",
+                    "content": "差异：蒙皮设计"
+                },
+                {
+                    "id": "8bc2e30a-4cdb-4edf-ac32-6487f160fdd4",
+                    "content": "这是一个包含其他蒙皮设计科孚岛游览案例。"
+                }
+            ]
+        },
+        {
+            "id": "41d81182-c34c-4b11-8df9-ec286cb9e58b",
+            "title": "酒窖游览案例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/demotour-winecellar.jpg",
+            "xml": [
+                {
+                    "id": "d4e68307-3e6f-4788-99f8-3532ede8eecd",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-winecellar/tour.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "ec045edc-3322-47cb-9236-83a57fc25a6f",
+                    "content": "案例展示：酒窖"
+                },
+                {
+                    "id": "df478b77-68a5-4406-a46d-3ef8534c4679",
+                    "content": "这是一个完全手工构建的不包含蒙皮的游览图，使用小地图和雷达锥来作为导航，并且使用了动画热点。"
+                }
+            ]
+        },
+        {
+            "id": "4d5a9601-2815-43c5-9485-fba2a28af78f",
+            "title": "3D 立体展示案例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/demotour-stereoscopic.jpg",
+            "xml": [
+                {
+                    "id": "b59994c1-933e-43a5-b1de-670cd368e99e",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-stereoscopic/tour.xml"
+                },
+                {
+                    "id": "39889b8d-152c-414b-bc57-59bdd71dc6d4",
+                    "title": "stereooffset_helper.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-stereoscopic/stereooffset_helper.xml"
+                },
+                {
+                    "id": "8dd85642-8e3c-40c7-a2b8-e554be73bd8f",
+                    "title": "webvr.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/webvr.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "53eb6f66-2b68-4711-aba2-bb2fd9f4506e",
+                    "content": "案例展示：立体三维全景图像"
+                },
+                {
+                    "id": "dff24493-e205-4bf3-9f42-c1177ac3f085",
+                    "content": "这是观看立体3D图像的几种显示可能性的演示:"
+                },
+                {
+                    "id": "3b94bf53-4331-4268-9a65-bdac5abdd784",
+                    "content": "Anaglyph - 使用红色/青色眼镜观看。"
+                },
+                {
+                    "id": "09e1c5d9-0209-4f1c-b11f-736c8e55b09f",
+                    "content": "3D TV - 3d智能电视的半并排渲染。"
+                },
+                {
+                    "id": "0910b82b-70e7-4c72-b61c-ec1e7dca3db3",
+                    "content": "Side-by-Side - 简洁的并排渲染"
+                },
+                {
+                    "id": "712d7ebd-09bf-4ee2-b074-9c67d3bb9654",
+                    "content": "WebVR - 使用VR头显观看。"
+                },
+                {
+                    "id": "7c497932-da4c-4b4d-8d81-d828eb9c6c35",
+                    "content": "Toggle L/R - 左/右图像切换。"
+                }
+            ]
+        },
+        {
+            "id": "8714aa9a-e6a9-4139-b505-eca9623668c6",
+            "title": "3D 立体印度寺庙游览案例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/indiantemple3d.jpg",
+            "xml": [
+                {
+                    "id": "991a4a74-46ea-4a17-96a1-804e3e81531c",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?tours/indiantemple3d/tour.xml"
+                },
+                {
+                    "id": "994df003-7375-4d40-ad47-7de764f5889b",
+                    "title": "stereooffset_helper.xml",
+                    "url": "https://krpano.com/viewsource.html?tours/indiantemple3d/stereooffset_helper.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "a31b4673-8449-42d5-acbd-1a74f47e62e5",
+                    "content": "印度 Meenakshi-Sundareswara 寺庙的 3D 立体画像虚拟游览。使用多边形热点导航。"
+                },
+                {
+                    "id": "48c83e94-b981-4856-9bed-6267ebe9fa7b",
+                    "content": "图片由 Aboorvasamy Sureshbabu / view360.in 提供。"
+                }
+            ]
+        },
+        {
+            "id": "266b907c-8dd3-4170-8ea4-ca7edfc44d7d",
+            "title": "Abu Simbel 寺庙的景深游览案例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/depthmap-abu-simbel.jpg",
+            "xml": [
+                {
+                    "id": "5f8c0bd9-cb5a-4718-b9d5-340dfd5e4145",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/abu-simbel-tempel-tour/tour.xml"
+                },
+                {
+                    "id": "bfcc0302-61f3-45e2-a6e2-0ede635eb1c3",
+                    "title": "depthmap_navigation.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/depthmap_navigation.xml"
+                },
+                {
+                    "id": "e6b277a3-4851-464c-ad43-9aa8e676dba6",
+                    "title": "tour_edithelper.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/abu-simbel-tempel-tour/tour_edithelper.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "d9b5ae2a-814b-4bf0-ad0b-c807f52957fa",
+                    "content": "Abu Simbel 小庙的景深游览案例。"
+                },
+                {
+                    "id": "de422d64-2f83-4b13-9bc7-a66d7e536727",
+                    "content": "一个使用景深图的全功能游览案例。它演示了如何从新的角度动态地查看一个pano，例如显示未扭曲的墙壁。此外，深度贴图允许很好的3d过渡。该游览案例提供了自动和手动生成的导航热点。景深图由 ever pano 工具生成，游览案例本身是由手工设计和编码的。同事也包含一个寻找 3D 视点和热点位置的小工具。"
+                }
+            ]
+        },
+        {
+            "id": "6cc6c734-d2ea-4d8a-9012-d3e60f0a06f7",
+            "title": "Gravina 公寓的景深游览案例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/depthmap-gravina-apartment.jpg",
+            "xml": [
+                {
+                    "id": "a4802022-60ef-49c7-bcdb-2f54b4b81ca1",
+                    "title": "main.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/gravina-apartment-tour/main.xml"
+                },
+                {
+                    "id": "5d7f112a-103a-4576-8404-b130b60e7f7b",
+                    "title": "main2.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/gravina-apartment-tour/main2.xml"
+                },
+                {
+                    "id": "93f7b74f-0d8d-4a3c-bf8f-a3e1c54a99e0",
+                    "title": "project3d.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/gravina-apartment-tour/project3d.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "5f1d5878-d294-48ef-9c59-82026173b673",
+                    "content": "Gravina 公寓的景深游览案例。"
+                },
+                {
+                    "id": "2fdb2139-5dba-486c-aceb-c4cf6fa97ffb",
+                    "content": "该游览案例完全由 ever 3D 工具生成。使用了 everpano Navigator 插件来完成游览案例的导航。这个插件可以通过自动找到点击点旁边的pano来轻松导航——当附近没有pano时，一个漂亮的3d缩放动画就会显示出来。"
+                },
+                {
+                    "id": "20729dec-743e-4f8e-b565-09a161eb2dee",
+                    "content": "这里有更多的景深图测试，同样的游览也有完全免费的 3d 移动和自动生成的热点全景导航:Gravina Apartment - Example 2"
+                }
+            ]
         }
     ]
 }

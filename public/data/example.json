@@ -540,41 +540,1473 @@
             ]
         },
         {
-            "id": "6cc6c734-d2ea-4d8a-9012-d3e60f0a06f7",
-            "title": "Gravina 公寓的景深游览案例",
+            "id": "f182b8b8-7ea1-4d81-81dd-1fcac9cd59d9",
+            "title": "深度图/实验：带纹理的 3D 模型",
             "type": [
                 "normal"
             ],
-            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/depthmap-gravina-apartment.jpg",
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/depthmap-textured.jpg",
             "xml": [
                 {
-                    "id": "a4802022-60ef-49c7-bcdb-2f54b4b81ca1",
-                    "title": "main.xml",
-                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/gravina-apartment-tour/main.xml"
-                },
-                {
-                    "id": "5d7f112a-103a-4576-8404-b130b60e7f7b",
-                    "title": "main2.xml",
-                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/gravina-apartment-tour/main2.xml"
-                },
-                {
-                    "id": "93f7b74f-0d8d-4a3c-bf8f-a3e1c54a99e0",
-                    "title": "project3d.xml",
-                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/gravina-apartment-tour/project3d.xml"
+                    "id": "abd67844-d3e6-4674-8b75-a5525bf8e4de",
+                    "title": "test.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/depthmap-textured/test.xml"
                 }
             ],
             "content": [
                 {
-                    "id": "5f1d5878-d294-48ef-9c59-82026173b673",
-                    "content": "Gravina 公寓的景深游览案例。"
+                    "id": "d4df98b1-4d8e-4540-bdcf-a55537e4a7e7",
+                    "content": "使用带纹理的 3D 模型的第一个实验测试。"
                 },
                 {
-                    "id": "2fdb2139-5dba-486c-aceb-c4cf6fa97ffb",
-                    "content": "该游览案例完全由 ever 3D 工具生成。使用了 everpano Navigator 插件来完成游览案例的导航。这个插件可以通过自动找到点击点旁边的pano来轻松导航——当附近没有pano时，一个漂亮的3d缩放动画就会显示出来。"
+                    "id": "6df8e266-e244-41ea-ad27-649b3727727c",
+                    "content": "不是使用一个全景图像并将其投影到 3D 模型或使用深度图图像，而是使用从多个全景图像生成的特殊图像/纹理。"
                 },
                 {
-                    "id": "20729dec-743e-4f8e-b565-09a161eb2dee",
-                    "content": "这里有更多的景深图测试，同样的游览也有完全免费的 3d 移动和自动生成的热点全景导航:Gravina Apartment - Example 2"
+                    "id": "bcfee9be-194f-44df-baad-d0dc8427459d",
+                    "content": "这可以用于多种方式，例如更好的“玩具屋视图”、更好的过渡、更好的 3D/VR 走动。"
+                },
+                {
+                    "id": "ad9c2a5d-4ed1-4981-99fc-f39fbfdaea4a",
+                    "content": "从技术上讲，这里的这个例子只是第一次测试。在下一个版本中可能会有许多变化和改进，例如更快的加载、多分辨率纹理加载、专用的 xml 语法/使用 API，可能将 3D 模型始终保存在内存中以便在需要时快速/即时切换到它（对于玩具屋视图或场景转换），可能与更高分辨率的全景图像进行一些混合/混合。"
+                },
+                {
+                    "id": "723367eb-4524-4aac-9b19-a2dac34a8fad",
+                    "content": "3D 模型和纹理是使用Blender的PanoCamAdder 插件生成的。有关纹理生成的 更多信息。感谢Michael Adam提供示例数据！"
+                }
+            ]
+        },
+        {
+            "id": "d3c18fc7-35ab-4700-b33d-76added58a1a",
+            "title": "深度图图像",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/depthmap-images.jpg",
+            "xml": [
+                {
+                    "id": "52a5d220-2ff3-43d7-8f3a-442ca993850e",
+                    "title": "depthmap-images.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/depthmap-images/depthmap-images.xml"
+                },
+                {
+                    "id": "dfb573a4-8385-4099-9246-abe9bfba8a01",
+                    "title": "depthmap_navigation.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/depthmap_navigation.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "b3d4ad63-51fc-4557-8583-eb9ef6c49747",
+                    "content": "带有深度图图像的全景图 示例"
+                },
+                {
+                    "id": "b7ee3ce5-5aba-4fe2-afae-2d65ddacfb2a",
+                    "content": "这些示例中的深度图要么由相机本身创建，要么通过渲染软件连同（也渲染的）全景图像一起创建，要么使用立体全景中的一些立体到深度软件创建。"
+                }
+            ]
+        },
+        {
+            "id": "553a8677-b58c-43cc-ae52-2333523a4c6f",
+            "title": "Depthmap-图像辅助工具",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/depthmap-helper-tool.jpg",
+            "xml": [
+                {
+                    "id": "cdf5319d-0264-45e3-b51a-49858a674df3",
+                    "title": "depthmap_helpertool_example.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/depthmap-helper-tool/depthmap_helpertool.xml"
+                },
+                {
+                    "id": "dc3c9761-1400-4f1f-8ca9-67c84539077e",
+                    "title": "depthmap_helpertool.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/depthmap_navigation.xml"
+                },
+                {
+                    "id": "3044322c-6f8e-4bfc-ae57-499beeea2f03",
+                    "title": "depthmap_navigation.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/depthmap_navigation.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "89ce561c-6d7e-4346-92dc-470848b5ae53",
+                    "content": "Depthmap-图像辅助工具"
+                },
+                {
+                    "id": "faddc273-5264-4680-a481-ce1e0a40ac00",
+                    "content": "一个小的帮助工具，用于为depthmap-images找到正确的偏移和比例 设置。这些设置的值取决于深度图图像的创建和映射方式。"
+                }
+            ]
+        },
+        {
+            "id": "00ee7252-014c-469f-81df-1d09f91ad88e",
+            "title": "深度图-图像 24 位 RGB 编码更精确",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/depthmap-24bit-encoding.jpg",
+            "xml": [
+                {
+                    "id": "bfe75787-ffd0-451a-99d7-a462c577861b",
+                    "title": "depthmap_precision_compare.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/depthmap/depthmap-24bit-encoding/depthmap_precision_compare.xml"
+                },
+                {
+                    "id": "19c2e688-46a0-4b80-a381-c7ee124ff0f4",
+                    "title": "depthmap_navigation.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/depthmap_navigation.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "3ba471b8-9300-484e-8b0d-24e3fc12c1a8",
+                    "content": "对深度图图像使用不同位深度的比较。"
+                },
+                {
+                    "id": "7f571328-64a7-49d9-bfa5-f7af703a18b4",
+                    "content": "通过将深度图存储为RGB 编码图像，可以在重建 3D 环境时使用 16 位或 24 位（而不是灰度图像的 8 位）深度信息以获得更高的精度。"
+                }
+            ]
+        },
+        {
+            "id": "d9b4466a-9083-42c5-8df3-94cb5a962039",
+            "title": "可拖动热点",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/dragable-hotspots.jpg",
+            "xml": [
+                {
+                    "id": "6cd84eb0-afbf-41c3-a7e2-4b23ec6e7656",
+                    "title": "dragable-hotspots.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/dragable-hotspots/dragable-hotspots.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "c820752b-ebff-4f7d-b7e2-ebe1b2453d40",
+                    "content": "可拖动热点"
+                },
+                {
+                    "id": "7584404b-6c9e-40f7-9476-96e3c976b9da",
+                    "content": "此示例显示了如何拖动热点位置的可能性。附加的热点位置将被格式化为 xml 代码并通过 文本字段插件显示。"
+                }
+            ]
+        },
+        {
+            "id": "c679b7a6-0c15-4f89-a2ad-21ed255c23c6",
+            "title": "可拖动图层",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/dragable-layers.jpg",
+            "xml": [
+                {
+                    "id": "96ebbc3c-72dc-4df1-a1f4-5888c1573711",
+                    "title": "dragable-layers.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/dragable-layers/dragable-layers.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "0856f090-7083-4462-9db8-a74b8010d260",
+                    "content": "可拖动图层"
+                },
+                {
+                    "id": "7927ef6f-ddf1-4226-adc6-5177cd2d6e24",
+                    "content": "此示例显示如何拖动 <layer> 元素以及 maskchildren=true （剪辑子元素）和maskchildren=false（不剪辑）之间的区别"
+                }
+            ]
+        },
+        {
+            "id": "790860cc-16e0-407b-87b2-18616d33ef79",
+            "title": "鱼眼图像",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/fisheye-image.jpg",
+            "xml": [
+                {
+                    "id": "2516fccc-98b0-4c6d-9df9-a422277a7c71",
+                    "title": "fisheye.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/fisheye-image/fisheye.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "63643c2f-cc8d-4da6-8a5c-450094723263",
+                    "content": "直接使用鱼眼图像的示例（没有拼接或去扭曲）。"
+                },
+                {
+                    "id": "489b07b5-5fc5-4695-ad8a-124e86da3b68",
+                    "content": "鱼眼图像参数可以使用PTGUI确定。看这里了解更多。这也可以用于视频文件或 mjpeg 实时流（例如，用于圆顶网络摄像头）。"
+                }
+            ]
+        },
+        {
+            "id": "870db9ca-baef-4c62-bb4f-dbebabbd53c6",
+            "title": "楼层热点",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/floor-hotspot-at-mouse-position.jpg",
+            "xml": [
+                {
+                    "id": "64576b73-465f-4eac-a254-0b52c1d91c90",
+                    "title": "floor-hotspot-example.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/floor-hotspot-at-mouse-position/floor-hotspot-example.xml"
+                },
+                {
+                    "id": "665efdc1-24c4-48c6-a872-66648d9ce58b",
+                    "title": "floor-hotspot-example-2.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/floor-hotspot-at-mouse-position/floor-hotspot-example-2.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "fc357b6f-3b59-4ea3-901e-d3464b933390",
+                    "content": "鼠标位置的地板热点"
+                },
+                {
+                    "id": "12ed7b90-524f-45bf-93be-bac69c507ed2",
+                    "content": "制作沿地板移动的透视校正 3D 热点的示例。这可用于 3D 深度图全景中的导航，但也可用于普通 2D 游览中，以获得漂亮的 3D 外观动态热点。"
+                }
+            ]
+        },
+        {
+            "id": "8d141975-d5c5-4299-825f-1209a9ede932",
+            "title": "弹出热点",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/flyout-hotspots.jpg",
+            "xml": [
+                {
+                    "id": "4f67dd5d-1d9d-44d7-8226-ed760e79dac5",
+                    "title": "flyout-hotspots.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/flyout-hotspots/flyout-hotspots.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "2e40b7ce-1897-4e22-9660-fcfceddfc782",
+                    "content": "弹出热点"
+                },
+                {
+                    "id": "71b8179f-932c-44e1-95e3-8e74dd0450a3",
+                    "content": "这是关于热点飞行设置 的示例。通过将它从 0.0补间到 1.0，热点可以从它在全景图内的正常位置移动到屏幕上的固定位置。"
+                },
+                {
+                    "id": "4346a271-39cb-4bc9-b157-21cdc0387310",
+                    "content": "该示例管理多个热点的状态。当一个热点飞出时，其他热点将自动飞回。"
+                }
+            ]
+        },
+        {
+            "id": "376f939c-956d-4af4-a47b-5eb81f64844d",
+            "title": "跟随鼠标",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/followmouse.jpg",
+            "xml": [
+                {
+                    "id": "90681d88-058b-45e6-a5cc-b345a230d8f3",
+                    "title": "example.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/followmouse/example.xml"
+                },
+                {
+                    "id": "f392da1a-62af-4531-8e05-592283abe9fc",
+                    "title": "followmouse.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/followmouse/followmouse.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "38f1fe83-3ad9-478f-abae-474c3d4bd9d2",
+                    "content": "跟随鼠标"
+                },
+                {
+                    "id": "252e773d-8cb2-4a3c-92ad-1930a675220a",
+                    "content": "让视图自动稍微跟随用户鼠标光标的示例。例如，指示这是一个交互式图像。一旦用户开始交互，以下将暂停并稍后自动恢复。"
+                }
+            ]
+        },
+        {
+            "id": "6b0dd4e3-96d2-48fd-8e18-f973d69d966f",
+            "title": "Fov类型",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/fovtype.jpg",
+            "xml": [
+                {
+                    "id": "13058d88-144c-4ca4-aadc-009dd4e2b879",
+                    "title": "fovtype.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/fovtype/fovtype.xml"
+                },
+                {
+                    "id": "d2be4ae6-353b-4ff7-aae8-baff24dd90ab",
+                    "title": "combobox.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/combobox.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "15c15ab7-19c4-47e9-9764-4713818f3aa2",
+                    "content": "视野类型比较和固定屏幕尺寸方面。"
+                },
+                {
+                    "id": "eaa61881-842c-4398-a5c2-049d44999cc5",
+                    "content": "view.fovtype设置定义了view.fov视野设置与窗口大小的关系。这里比较了不同的设置以及它们在不同屏幕尺寸方面的工作方式。"
+                }
+            ]
+        },
+        {
+            "id": "38f2682f-7c04-4bd5-a882-25d42ae4b3ba",
+            "title": "谷歌地图",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/googlemaps.jpg",
+            "xml": [
+                {
+                    "id": "cb429c9b-8bdd-4d98-a9c3-d9785a1822a6",
+                    "title": "googlemaps.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/fovtype/fovtype.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "86f039ea-f2cf-40d4-be58-24962f396a78",
+                    "content": "谷歌地图"
+                },
+                {
+                    "id": "2bf3c1ec-d747-4cd4-8296-315e68a8802b",
+                    "content": "这是一个关于如何包含 googlemaps插件并在其上设置位置的简单示例。"
+                }
+            ]
+        },
+        {
+            "id": "b2abeebf-126c-4e50-bdb7-045ae70cef5f",
+            "title": "陀螺仪",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/googlemaps.jpg",
+            "xml": [
+                {
+                    "id": "2d69daf6-79c5-4958-896c-3a088c6cee19",
+                    "title": "gyro.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/gyro/gyro.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "805ee212-90b7-4764-83ce-4d1c82b2a045",
+                    "content": "陀螺仪"
+                },
+                {
+                    "id": "ac1b3bc3-b962-4d09-8e83-0a45e99fa2bc",
+                    "content": "这个例子展示了如何包含和使用 gyro2插件。这允许通过设备的陀螺仪控制全景视图。"
+                }
+            ]
+        },
+        {
+            "id": "482b1860-3b9b-4571-aec2-47ba69b32ab7",
+            "title": "热点 Alphachannel / 透明视频",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/alphachannel.jpg",
+            "xml": [
+                {
+                    "id": "1f937891-67a5-4f6b-ac61-bdd9a2372575",
+                    "title": "alphachannel.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/hotspot-alphachannel/alphachannel.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "f4ab578e-1dd0-4a9c-b7a5-52f33ddbc27a",
+                    "content": "热点阿尔法频道"
+                },
+                {
+                    "id": "7f474f60-4594-4555-aef6-cd52c7ca7d0e",
+                    "content": "通过alphachannel设置，可以使用带有作为灰度图像添加到右侧或底部的 alpha/透明通道的 JPEG 图像或视频。"
+                },
+                {
+                    "id": "12c66ab8cf-b293-4b14-a83e-3d48d9057d5f3",
+                    "content": "这样就可以实现浏览器尚不支持的透明视频。对于透明视频的另一种方式，另请参阅色度键掩码示例。"
+                }
+            ]
+        },
+        {
+            "id": "21984124-b0d7-4a13-80de-662fdc94f017",
+            "title": "热点提取",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/hotspot-extract.jpg",
+            "xml": [
+                {
+                    "id": "10037533-8e87-47cb-baf1-a3f50dd8fc51",
+                    "title": "pool.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/hotspot-alphachannel/alphachannel.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "a8af6a8b-a99b-430e-8ae7-2c4c2cf0de1c",
+                    "content": "教程示例从任何类型的全景图像中提取扭曲的热点（具有完美的像素对齐）。"
+                }
+            ]
+        },
+        {
+            "id": "67afb9fb-021e-4c6f-a287-b64b925599ad",
+            "title": "图片库",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/image-gallery.jpg",
+            "xml": [
+                {
+                    "id": "5b06e65b-763d-40cc-a480-136e955adfea",
+                    "title": "imagegallery.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/image-gallery/imagegallery.xml"
+                },
+                {
+                    "id": "b6b0bd87-0ca0-4061-b306-082fc6124a0c",
+                    "title": "thumbbar.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/image-gallery/thumbbar.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "3b5ebc94-3198-455c-b018-d147d23e49a0",
+                    "content": "一个简单的图片库"
+                },
+                {
+                    "id": "c8a2cb4b-6390-45e0-a11f-864d3d884e12",
+                    "content": "带有飞出/缩放图像的缩略图画廊栏 xml 脚本的示例。"
+                }
+            ]
+        },
+        {
+            "id": "f116eb49-4229-4a03-9f4a-93d9241d235c",
+            "title": "内联视频播放器",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/inline-video-players.jpg",
+            "xml": [
+                {
+                    "id": "d5015d64-395c-46ef-a719-e3a9bf05b695",
+                    "title": "inline-video-players-example.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/inline-video-players/inline-video-players-example.xml"
+                },
+                {
+                    "id": "46e5469d-ede5-4065-b7c5-1cee8118323c",
+                    "title": "video-player.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/inline-video-players/video-player.xml"
+                },
+                {
+                    "id": "c81f53bf-d67f-49a6-889f-7d9e4dcb7155",
+                    "title": "youtube-player.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/inline-video-players/youtube-player.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "b81f8627-b6c8-481b-b33d-e6aed1ce32c7",
+                    "content": "在线视频播放器"
+                },
+                {
+                    "id": "94447460-a8c8-48d1-b332-ff28ce11ab04",
+                    "content": "此示例显示了两个视频播放器 xml 脚本 - 一个播放普通视频文件 - 另一个播放 Youtube 视频。在视频播放期间，一个变暗的背景层将覆盖全景和其他用户界面元素。"
+                }
+            ]
+        },
+        {
+            "id": "f10ba0f1-0714-478f-b416-da14a8e6de83",
+            "title": "互动区",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/interactive-area.jpg",
+            "xml": [
+                {
+                    "id": "25816dc0-f900-4043-9719-0c55f0a95484",
+                    "title": "interactive-area.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/interactive-area/interactive-area.xml"
+                },
+                {
+                    "id": "04d519ee-ca4d-472f-907b-b2a845aacfa0",
+                    "title": "video-player.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/inline-video-players/video-player.xml"
+                },
+                {
+                    "id": "a35f383e-2dde-4a5c-985a-fa77675cdfd8",
+                    "title": "youtube-player.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/inline-video-players/youtube-player.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "57dea6b4-2b94-49cf-8a58-e5eac2e40b7d",
+                    "content": "互动区"
+                },
+                {
+                    "id": "be19c344-031f-439a-9175-4790f4d38552",
+                    "content": "在此示例中，将使用显示不同全景内容的扭曲热点图像。当将鼠标悬停在不可见的多边形热点上时，该热点将淡入，该多边形热点充当图像热点的“点击区域”。"
+                }
+            ]
+        },
+        {
+            "id": "f9c16825-0a1a-4e0f-b165-b8b2725d1242",
+            "title": "Javascript：添加和删除 Panos",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/js-add-remove-panos.jpg",
+            "xml": [],
+            "content": [
+                {
+                    "id": "1e8a41c3-ac23-46e6-8d1e-7d9763559d99",
+                    "content": "通过 Javascript 添加和删除全景图"
+                },
+                {
+                    "id": "af3d9750-793f-4c64-95c5-7f58f0bfd034",
+                    "content": "动态添加 Flash 或 HTML5 查看器元素并将它们从网页中删除的示例。"
+                }
+            ]
+        },
+        {
+            "id": "023070f0-ac06-4408-8864-f764bb7290dc",
+            "title": "JavaScript API 示例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/js-api-examples.jpg",
+            "xml": [],
+            "content": [
+                {
+                    "id": "0dddcc9e-f453-4347-b3dc-db7ec480e861",
+                    "content": "JavaScript API 示例"
+                },
+                {
+                    "id": "4654e12d-bbba-4aa0-a47d-0f21d53c38e5",
+                    "content": "使用 krpano 查看器的 Javascript API 的几个示例。"
+                }
+            ]
+        },
+        {
+            "id": "f143cb07-bdf0-4e93-b4a4-133dc27726bd",
+            "title": "Javascript：同步两个查看器",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/js-sync-viewers.jpg",
+            "xml": [
+                {
+                    "id": "088b4949-d879-4516-a06b-fb81ced6f661",
+                    "title": "pano1.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/javascript-interface/js-sync-viewers/pano1.xml"
+                },
+                {
+                    "id": "3beb453c-d1d1-400a-9126-32fc9f82ce0c",
+                    "title": "pano2.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/javascript-interface/js-sync-viewers/pano2.xml"
+                },
+                {
+                    "id": "37f58d27-62d9-47a9-92df-961902d583fa",
+                    "title": "sync.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/javascript-interface/js-sync-viewers/sync.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "174f9dcf-6b26-4a67-b530-35769cb6f4de",
+                    "content": "使用 Javascript 接口同步两个 krpano 查看器。"
+                }
+            ]
+        },
+        {
+            "id": "11b4e0d0-6fb0-4129-8fab-246f6dd2abbd",
+            "title": "小小星球简介",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/littleplanetintro.jpg",
+            "xml": [
+                {
+                    "id": "8960133b-3495-4ddb-9e0c-2e943fe42417",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/tour.xml"
+                },
+                {
+                    "id": "a4a89988-b266-4238-bc8b-ca628d5af918",
+                    "title": "vtourskin.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/demotour-corfu/skin/vtourskin.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "8cd61610-2383-49dd-b777-c12974fb3aad",
+                    "content": "从小星球介绍开始的科孚岛之旅"
+                },
+                {
+                    "id": "b8ddb205-5baa-43a4-8458-f32bb047b426",
+                    "content": "“小星球”视图本身基本上只是立体投影加俯视。在 krpano 中，可以通过将 view.distortion设置为 1.0 来启用立体投影失真。通过动画（补间）这个设置和观察方向，可以创建一个漂亮的 Little Planet 过渡动画"
+                },
+                {
+                    "id": "b35f0461-dc0b-4c5e-b605-d2cd4088474f",
+                    "content": "默认的vtourskin.xml 皮肤已经提供了预定义的 Little Planet Intro 脚本。要启用它，只需将 tour.xml 中的littleplanetintro设置更改为true"
+                }
+            ]
+        },
+        {
+            "id": "d959a685-86a4-4714-bcab-afad9e1fef95",
+            "title": "加载进度",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/loading-progress.jpg",
+            "xml": [
+                {
+                    "id": "fda6a0db-4e81-4144-9fd4-60c10f333cbe",
+                    "title": "loading-progress-example.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/loading-progress/loading-progress-example.xml"
+                },
+                {
+                    "id": "7852e5f4-98eb-43c6-9328-2b1c9efa9eb1",
+                    "title": "loadinganimation.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/loading-progress/loadinganimation.xml"
+                },
+                {
+                    "id": "67bf051e-4217-4d90-8b2f-28c8a6647d11",
+                    "title": "loadingbar.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/loading-progress/loadingbar.xml"
+                },
+                {
+                    "id": "5ea9595b-da08-4fb2-89a4-080f3ecb58d5",
+                    "title": "loadingpercenttext.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/loading-progress/loadingpercenttext.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "001a669d-0643-4bb5-8188-feaf98cf4dd4",
+                    "content": "可视化加载进度。"
+                },
+                {
+                    "id": "bfdad9a6-2738-4945-8afb-bed9918ecf9d",
+                    "content": "此示例展示了可视化全景图像加载进度的三种可能性 - 作为基于图像的循环动画（带有裁剪动画的图像条），作为加载栏（通过更改图层元素的大小）和作为百分比文本。"
+                },
+                {
+                    "id": "561d36e1-4c50-4e70-b6e0-e1c7a4f1547b",
+                    "content": "只需包含一个示例 xml 文件即可将这种加载进度动画添加到自己的全景图或游览中。"
+                }
+            ]
+        },
+        {
+            "id": "ac3f42c0-40a3-48fd-ad58-676caf024d6c",
+            "title": "截图API",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/makescreenshot-api.jpg",
+            "xml": [
+                {
+                    "id": "eb92b08f-4342-44af-8f67-644d2bff3468",
+                    "title": "makescreenshot-api-example.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/makescreenshot-api/makescreenshot-api-example.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "f3636b57-0fb2-4cf8-a8e7-131cc2687f6a",
+                    "content": "直接用krpano截图。"
+                },
+                {
+                    "id": "ead3520d-ac1c-417f-9291-8f7df7d0b99b",
+                    "content": "makeScreenshot() API 的使用示例。"
+                }
+            ]
+        },
+        {
+            "id": "a9e4e97c-cced-4637-b4ba-11935f59ab3f",
+            "title": "地图示例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/maps.webp",
+            "xml": [
+                {
+                    "id": "bf2163f1-866c-4e25-acbb-63dbbf285223",
+                    "title": "maps.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/maps/maps.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "74b00da5-376c-460d-aba8-6e39b4b115c7",
+                    "content": "使用嵌入 krpano 层的 krpano 查看器作为多分辨率地图瓦片的查看器。这样就不需要外部地图库，地图热点及其所有交互都可以使用 krpano 完成。"
+                },
+                {
+                    "id": "d2c4a7ac-9e7e-4f6c-bc61-2690791d80f8",
+                    "content": "对于移动设备，使用特殊的分屏布局。"
+                },
+                {
+                    "id": "584bf989-fb6c-4214-bcbe-6693abef9e52",
+                    "content": "这里的地图实现也是Javascript使用krpano的例子。"
+                }
+            ]
+        },
+        {
+            "id": "126a3d9852-b66f-4427-9b60-cf92ecbc53bb3",
+            "title": "地图2示例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/images/maps2.webp",
+            "xml": [
+                {
+                    "id": "a543ac32-e34f-4635-a10c-d9a96d277783",
+                    "title": "maps2.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/maps2/maps2.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "b3415748-cc9c-463c-96d0-ec8a4eb0f91f",
+                    "content": "Maps2 - OpenStreetMap 瓦片/纬度和经度支持/地理位置"
+                },
+                {
+                    "id": "f0d7c8b8-e010-470b-a615-bfb3ce506714",
+                    "content": "在第二个地图示例中，krpano 用作主地图查看器，具有完整的 lat/lng/zoom 支持（用于视图和热点），然后在单击热点时，嵌入另一个 krpano 查看器以显示这些位置的全景图和游览。"
+                },
+                {
+                    "id": "eda91bd1-dd03-4f9c-aa14-1efedb081fbd",
+                    "content": "此示例还展示了如何通过 Javascript 扩展具有核心功能的 krpano 以及如何使用浏览器 Geo-Location API。"
+                }
+            ]
+        },
+        {
+            "id": "606d77f4-1a86-472f-9b26-081608c4533b",
+            "title": "多分辨率：东京 - 45 Gigapixel",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/tokyo45gp.jpg",
+            "xml": [
+                {
+                    "id": "92ce07e6-551e-4abd-b7c9-c7c4d3cda80f",
+                    "title": "tokyo.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/tokyo45gp/tokyo.xml"
+                },
+                {
+                    "id": "08d93310-6960-47d1-ac5c-1bd359d8507c",
+                    "title": "skin.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/tokyo45gp/skin/skin.xml"
+                },
+                {
+                    "id": "e2b400df-cb66-41fe-bb82-28b7230d119a",
+                    "title": "webvr_autozoom.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/webvr_autozoom.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "7e3fb866-6939-4c14-aabf-84355af417b6",
+                    "content": "以加载性能和图像质量为例的超大全景图（支持 VR 缩放）。"
+                },
+                {
+                    "id": "0c9bb312-8986-4d35-ae6f-f69c2e7e36f4",
+                    "content": "源图像是 300.000 x 150.000 像素大（=45 Gigapixel）。为了显示，它被转换为 6 x 95.493 x 95.493 像素立方体面（~55 Gigapixel）。"
+                },
+                {
+                    "id": "e435ef2c-372a-4cb9-ab09-3028ab60414f",
+                    "content": "从六本木新城森大厦拍摄。由 Jeffrey Martin / 360cities.net 提供。"
+                }
+            ]
+        },
+        {
+            "id": "95eae3a4-ccf2-42bb-a4f9-1b6eccdefb3d",
+            "title": "多分辨率：1.4 Petapixel",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/petapixel.jpg",
+            "xml": [
+                {
+                    "id": "01e4a33b-692f-40f1-8b1a-30879c6103a7",
+                    "title": "petapixel.xml",
+                    "url": "https://krpano.com/viewsource.html?petapixel/petapixel.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "283c1b4b-d50c-4395-8b44-1b4ffe619856",
+                    "content": "用于演示理论尺寸可能性的合成 1.4 Petapixel-pano。一个 Petapixel 是一百万 Gigapixel（或 1000 Terapixel）。"
+                },
+                {
+                    "id": "f39c96f5-bbdd-4ddc-b65f-5b9533b01190",
+                    "content": "全景图是一个立方体全景图，一个立方体的边尺寸为 16.777.216 x 16.777.216 像素。这相当于 52.707.178 x 26.353.589 像素大小的球形全景图。"
+                },
+                {
+                    "id": "47c8eebd-fe6d-4cd9-b445-fb45b470a6cf",
+                    "content": "为了使该测试用例尽可能逼真，从服务器加载图块图像（并且它们是根据请求动态生成的）。这里还有一个Partial-Pano测试用例（具有可调整的 hfov/vfov 设置）"
+                }
+            ]
+        },
+        {
+            "id": "e88fed92-468d-47d9-a460-faa210e0afd7",
+            "title": "Multires：巴黎之旅",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/paris.jpg",
+            "xml": [
+                {
+                    "id": "ada3bced-ccbf-4bf2-acfb-d2b6e60a923e",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?tours/paris/tour.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "f22ed422-961c-490a-bb61-c6850b9a941b",
+                    "content": "巴黎的虚拟之旅，具有非常大的多分辨率图像（每个全景约 750 兆像素）。"
+                },
+                {
+                    "id": "ee1ae07c-60ac-4996-9a0f-25d2c22ab201",
+                    "content": "图片由ecliptique.com提供。"
+                }
+            ]
+        },
+        {
+            "id": "be9498c8-58eb-4f0c-8d83-2182267640b0",
+            "title": "多分辨率：布鲁克林大桥 - 6 Gigapixel",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/brooklynbridge.jpg",
+            "xml": [
+                {
+                    "id": "a211ab2a-7f47-4aa0-a8f7-0630bcdcc755",
+                    "title": "brooklynbridge.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/brooklynbridge/brooklynbridge.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "32a6fdd2-33f4-40d6-89be-e8d54e3fd394",
+                    "content": "纽约布鲁克林大桥的高分辨率（6 Gigapixel）平面全景图。"
+                },
+                {
+                    "id": "2fecfeb1-8b8f-4877-a98e-377322906726",
+                    "content": "图片由 Joergen Geerds/ newyorkpanorama.com提供。"
+                }
+            ]
+        },
+        {
+            "id": "eec5e1f6-3585-40f7-a0ad-6b012e745fa8",
+            "title": "多分辨率：艾菲尔铁塔 - 2 Gigapixel",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/eiffeltower.jpg",
+            "xml": [
+                {
+                    "id": "5723cfe2-1523-4e79-8e7a-6a51c8ccbaa5",
+                    "title": "eiffeltower.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/eiffeltower/eiffeltower.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "a4de39e1-05c8-41f3-ad3c-49390ef81831",
+                    "content": "巴黎埃菲尔铁塔的高分辨率（2 Gigapixel）平面全景图。"
+                },
+                {
+                    "id": "c677c3c3-9198-4413-abd8-83bdda17b210",
+                    "content": "图片由ecliptique.com提供。"
+                }
+            ]
+        },
+        {
+            "id": "06fd4763-8c34-48d5-a446-8487c8c19540",
+            "title": "局部全景：罗马",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/partialpano.jpg",
+            "xml": [
+                {
+                    "id": "a2622e63-3f26-456f-87f0-6c3f228de4ae",
+                    "title": "partialpano.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/partialpano/partialpano.xml"
+                },
+                {
+                    "id": "b7360cc6-bfb3-4255-8920-33aae012ef9f",
+                    "title": "partialpano_helpertool.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/partialpano/partialpano_helpertool.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "17ce297a-8a0e-4a0e-8b30-dcc9d37b98eb",
+                    "content": "罗马的多分辨率局部球面全景（视野约为 156x47 度）。"
+                },
+                {
+                    "id": "a1c0af5f-35cf-4e03-b92d-70f26880e53e",
+                    "content": "为了测试部分全景功能，包含一个小的辅助工具，用于更改全景的 fov-coverage 设置。此辅助工具可用于在部分全景未知时查找正确的 hfov/vfov/voffset 设置。"
+                }
+            ]
+        },
+        {
+            "id": "cbdf4113-31d7-4180-ba73-d182a9677f50",
+            "title": "局部全景：圣彼得大教堂",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/stpetersbasilica.jpg",
+            "xml": [
+                {
+                    "id": "79eaed45-d9c5-45cc-be9a-1f990347950d",
+                    "title": "petersplatzkuppel.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/rom/petersplatz/blickvonkuppel/petersplatzkuppel.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "0dcef2cc-aaa6-48bd-b491-e1f3f30104f1",
+                    "content": "罗马圣彼得大教堂屋顶的多分辨率局部球面全景（视野约为 54x13 度）。与附近其他全景的热点相连。"
+                }
+            ]
+        },
+        {
+            "id": "777e36f3-ff67-4cb6-9984-b7b034ca40ab",
+            "title": "部分全景：斗兽场",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/colosseum.jpg",
+            "xml": [
+                {
+                    "id": "76cc09be-bfdb-4ac4-b4da-376d1d8249d6",
+                    "title": "kolosseum_vorne.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/rom/kolosseum/vorne/kolosseum_vorne.xml"
+                },
+                {
+                    "id": "12de455b82-5d17-4b44-a122-11122a3e55fa3",
+                    "title": "kolosseum_seite.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/rom/kolosseum/seite/kolosseum_seite.xml"
+                },
+                {
+                    "id": "da06fc27-eea9-44eb-8995-8e6ba1fcc167",
+                    "title": "hotspotstyles.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/hotspotimages/hotspotstyles.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "6aa16ff4-ae3a-4e91-bee1-4d50a51d167c",
+                    "content": "罗马斗兽场的两个多分辨率局部球面全景（~156x75 和~169x54 度 fov）。"
+                },
+                {
+                    "id": "c2c2bd6b-9586-455f-9ab6-03f645203e2f",
+                    "content": "这里包含用于测试部分全景功能的 partialpano_helpertool.xml 的示例：Colosseum with Partialpano Helper Tool"
+                }
+            ]
+        },
+        {
+            "id": "c0c8e129-bdda-4214-a9a6-4ec0fd7baa42",
+            "title": "局部全景：许愿池",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/trevifountain.jpg",
+            "xml": [
+                {
+                    "id": "7777a462-8ef6-4e89-839f-7b7e9197fd61",
+                    "title": "flat.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/rom/trevifountain/flat.xml"
+                },
+                {
+                    "id": "28597a90-8134-44cf-9430-46f07985a099",
+                    "title": "partialpano.xml",
+                    "url": "https://krpano.com/viewsource.html?panos/rom/trevifountain/partialpano.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "5ed64bd3-4abb-4445-9943-e9f893b22846",
+                    "content": "罗马特莱维喷泉的多分辨率平面全景图（~483 百万像素）。平面全景投影是一次显示完整图像内容的好方法。"
+                },
+                {
+                    "id": "51c6cc99-fd2c-43f4-a429-de87127d78fd",
+                    "content": "这里的全景图与部分全景图相同：特莱维喷泉部分全景图 (fov 95x66)。与平面全景投影不同，这允许在放大时在边缘处看到不失真的视图，并且由于球形投影中的不同裁剪范围，还可以显示更多内容。"
+                }
+            ]
+        },
+        {
+            "id": "2b6d566e-06af-420c-b84d-0e5393068d84",
+            "title": "最低点标志",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/nadir-logo.jpg",
+            "xml": [
+                {
+                    "id": "b86694c8-b345-46d4-a53e-655e82bb0ff4",
+                    "title": "nadir-logo.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/nadir-logo/nadir-logo.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "9a5510c2-7fe9-4ff5-bc87-068f789e72a6",
+                    "content": "使用图像作为自动旋转扭曲热点以覆盖全景的最低点区域（例如隐藏三脚架）的示例。"
+                }
+            ]
+        },
+        {
+            "id": "007bef45-0451-475e-ae74-c1779e96c5ad",
+            "title": "弹出窗口示例",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/pp-blur.jpg",
+            "xml": [
+                {
+                    "id": "fa96f06f-df45-4925-b971-5631be12d0f5",
+                    "title": "popups.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/popups/popups.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "5efbeff3-5678-413d-8d7f-fffe294e29ba",
+                    "content": "带有 iFrame/HTML/图像和模糊背景的弹出窗口"
+                },
+                {
+                    "id": "29449fbb-4a90-4d5c-8e02-c3d26a0f5c09",
+                    "content": "演示如何使用模糊后处理插件模糊背景以及如何打开几个不同的弹出窗口（HTML、网站、Panos、视频、图像）。"
+                }
+            ]
+        },
+        {
+            "id": "9650d24a-2fec-49d5-9809-deda480857e9",
+            "title": "后处理插件演示",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/pp-demo.jpg",
+            "xml": [
+                {
+                    "id": "bc502aea-3407-4b17-afc8-0315a8dfe1ab",
+                    "title": "postprocessing_demo.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/postprocessing/postprocessing_demo.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "aa8e5853-3199-46bf-94c9-5e8213f6cba9",
+                    "content": "后处理插件演示"
+                },
+                {
+                    "id": "ec45b10c-7795-44f6-b571-d2c9e3360b03",
+                    "content": "这些后处理插件的演示:"
+                },
+                {
+                    "id": "762b4546-528e-4599-a930-766bc77e3b64",
+                    "content": "光- 高质量曝光和光/影控制。"
+                },
+                {
+                    "id": "aaf19c02-25e2-4ec6-8787-be3665be2ce4",
+                    "content": "Blur - 高性能图像模糊。"
+                },
+                {
+                    "id": "2cfd25e9-03bb-4b17-8cfc-a2f16719944d",
+                    "content": "Sharpen - 用于锐化或局部对比度增强的 USM 锐化滤镜。"
+                },
+                {
+                    "id": "f55851c4-a7e1-40e6-9b75-453ff71b47d7",
+                    "content": "此外，此演示还展示了如何使用 krpano 层和操作系统实现一些控件。"
+                }
+            ]
+        },
+        {
+            "id": "bf4b8f46-ba67-4fbe-8c92-06d0d7a21de4",
+            "title": "后处理演示：基于缩放的锐化",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/pp-sharpen.jpg",
+            "xml": [
+                {
+                    "id": "9c145037-7ab5-4e3c-b871-18f858b59b5f",
+                    "title": "zoom_based_sharpening.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/postprocessing/zoom_based_sharpening.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "0a6dbd43-3327-4e02-942d-1cccd3ad5a9e",
+                    "content": "基于缩放的锐化"
+                },
+                {
+                    "id": "d8154cfc-c0ca-4f78-b684-efa5573786bb",
+                    "content": "此示例说明如何根据原始全景图像像素分辨率计算范围。此处将根据实际缩放级别使用它来调整锐化半径，因此锐化效果将与锐化原始图像本身时的锐化效果相同。"
+                }
+            ]
+        },
+        {
+            "id": "6d0de5eb-1258-4547-a249-b084a5ea342c",
+            "title": "滑块混合立方体",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/slider-blend-cubes.jpg",
+            "xml": [
+                {
+                    "id": "0bce9d00-14d1-4752-bedb-b130b6f70a63",
+                    "title": "slider.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/slider-blend-cubes/slider.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "8f6c1f12-932c-4de6-a18a-b521827d7076",
+                    "content": "使用滑块在两个全景图之间混合。"
+                },
+                {
+                    "id": "54279a61-addb-4340-9676-28cf8fd8dfbf",
+                    "content": "这两个全景图作为热点包含在内，混合是通过调整它们的 alpha 透明度设置来完成的。"
+                },
+                {
+                    "id": "954c775d-1ae4-4eb6-ab8d-f498ea5e1a8f",
+                    "content": "滑块由图像和一些 xml 脚本代码构建而成。"
+                }
+            ]
+        },
+        {
+            "id": "44edb910-a0fe-4713-a35a-9f23fd9a42c3",
+            "title": "雪插件演示",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/snow.jpg",
+            "xml": [
+                {
+                    "id": "c6b53201-4e90-46fb-aee5-b758e813787d",
+                    "title": "snow.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/snow/snow.xml"
+                },
+                {
+                    "id": "e50b80cd-1fc3-4d8f-9a84-fb39100cfb6a",
+                    "title": "combobox.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/combobox.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "a35df28a-7fac-43d8-8c9f-125a4c238cee",
+                    "content": "具有多种不同样式/设置 的Snow 插件 演示。"
+                }
+            ]
+        },
+        {
+            "id": "843c63ba-adb0-4935-8364-81797d7789b4",
+            "title": "分屏",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/splitscreen.jpg",
+            "xml": [
+                {
+                    "id": "7593dba9-c3a8-41de-8b1a-5b1cbf20bbde",
+                    "title": "splitscreen.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/splitscreen/splitscreen.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "e759822d-4f44-4fb7-8dc4-666719f91136",
+                    "content": "分屏"
+                },
+                {
+                    "id": "4098a8d2-756a-460d-9d89-614c9795bfc4",
+                    "content": "显示两个全景图进行比较。要么并排，要么分成两半。"
+                },
+                {
+                    "id": "c3436a12-4fc8-45d8-bbb0-df6d8dde0f92",
+                    "content": "对于此示例，使用了 krpano 查看器的立体声支持。"
+                },
+                {
+                    "id": "81c5d9c8-5b6d-4d77-8338-aca4d086e7b8",
+                    "content": "要加载立体图像，请参见此处： image.stereo"
+                },
+                {
+                    "id": "1902c164-61ee-4788-9a3a-cbc20d413f69",
+                    "content": "并在此处渲染立体图像： display.stereo"
+                }
+            ]
+        },
+        {
+            "id": "8191c658-8fa8-47a0-8cb4-2ea59e0c0ff7",
+            "title": "文本样式",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/textstyles.jpg",
+            "xml": [
+                {
+                    "id": "21b34f82-4b38-441e-b257-4afac37cf5e0",
+                    "title": "textstyles.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/splitscreen/splitscreen.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "0cc5f609-8ba6-41a4-ae27-ac5d093e860a",
+                    "content": "文本样式"
+                },
+                {
+                    "id": "21f8a79d-6238-48b4-816b-4257d4765a43",
+                    "content": "此示例显示了showtext.xml插件和几种不同文本样式的用法。使用多边形热点作为测试目标。"
+                }
+            ]
+        },
+        {
+            "id": "6ddbe7e5-cd42-4538-93b7-c5125e6f104a",
+            "title": "工具提示",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/tooltips.jpg",
+            "xml": [
+                {
+                    "id": "076f2723-0e3a-4a26-a7d7-ab8880f47c19",
+                    "title": "tooltips.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/tooltips/tooltips.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "1a939b83-e302-4e21-913e-de5e3f7feb2e",
+                    "content": "按钮和热点的工具提示"
+                },
+                {
+                    "id": "36a054ef-91dc-4512-8f68-d4873af84cc3",
+                    "content": "“工具提示”实施示例 - 通过将“工具提示”样式和“工具提示”属性分配给图层或热点，当元素悬停时，它将自动显示给定的工具提示文本。"
+                }
+            ]
+        },
+        {
+            "id": "8235cafd-8ba9-4029-8421-485dab9ac850",
+            "title": "视频热点",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/videohotspot.jpg",
+            "xml": [
+                {
+                    "id": "12461703-9264-4d86-8409-027032139132",
+                    "title": "videohotspot.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/videohotspot/videohotspot.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "410d625c-7dee-44d8-aa5c-0e85bb8ebf39",
+                    "content": "视频热点"
+                },
+                {
+                    "id": "03a755f3-be12-493f-b832-b46bdc30a50c",
+                    "content": "使用视频播放器插件作为扭曲热点的简单示例。"
+                }
+            ]
+        },
+        {
+            "id": "199bf64a-d322-4882-8238-7b686dcdb73e",
+            "title": "视频全景",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/videopano.jpg",
+            "xml": [
+                {
+                    "id": "c129b010-f7d6-48b0-a3e1-10ee26dddd3c",
+                    "title": "videopano.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/videopano/videopano.xml"
+                },
+                {
+                    "id": "e90f8ff0-841e-4453-a2e5-b115ad3f122a",
+                    "title": "videointerface.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/videopano/skin/videointerface.xml"
+                },
+                {
+                    "id": "bb2a971a-5901-4cd3-9737-87074c46beab",
+                    "title": "webvr.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/webvr.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "7644266d-3522-4949-a306-68939491e615",
+                    "content": "Videopano - 功能齐全的全景视频播放器皮肤。"
+                },
+                {
+                    "id": "85735d74-339c-4fce-8207-ad650735477e",
+                    "content": "这是全景视频播放器的示例。它提供了一个简单的 xml 接口，用于添加多个视频质量文件。对于使用/添加自己的视频，它们只会在 videopano.xml 文件中添加一次。"
+                },
+                {
+                    "id": "3f48bc41-0cc5-40e5-9995-4a8f93becc2a",
+                    "content": "用户界面提供：播放/暂停控制、搜索栏、音量/静音控制、更改质量的选项、播放速率和观看投影（包括特殊的“平面”视图）、全屏按钮、陀螺仪控制和 VR 支持."
+                },
+                {
+                    "id": "b8ccb6e6-90d4-4da3-add9-ede074f2b0d5",
+                    "content": "可以通过 videointerface.xml 中的一些设置轻松调整布局和设计。"
+                }
+            ]
+        },
+        {
+            "id": "63d515f7-38d9-4937-9aa9-e4d62149bf62",
+            "title": "WebVR 演示",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/webvr.jpg",
+            "xml": [
+                {
+                    "id": "d4572c17-4090-4290-83ff-52b60aa16010",
+                    "title": "krpano_vr.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/webvr/krpano_vr.xml"
+                },
+                {
+                    "id": "319dc116-43f6-4ab7-93f3-20d337e44e3f",
+                    "title": "contextmenu.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/webvr/contextmenu.xml"
+                },
+                {
+                    "id": "8a6b13d3-effc-4283-b61d-4b65d8d145e0",
+                    "title": "webvr.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/webvr.xml"
+                },
+                {
+                    "id": "2f95fc2d-ccbc-4b5a-af07-6247e7dd6df5",
+                    "title": "tour.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/webvr/panos/bluebonnet/tour.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "15cab141-ad0f-46b9-a9ff-1e26bc291f48",
+                    "content": "WebVR - 第一个 krpano VR 支持示例。"
+                },
+                {
+                    "id": "f03fd2e2-d1f4-469c-92d5-8851cd607c32",
+                    "content": "此示例是 VR 支持的小型演示。它包括一个介绍场景，并使用热点链接到其他示例。"
+                }
+            ]
+        },
+        {
+            "id": "b08b6954-c662-4f51-b96d-9ac181e08533",
+            "title": "WebVR 虚拟现实控制器",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/webvr-controllers.jpg",
+            "xml": [
+                {
+                    "id": "9f5ad086-e8d4-4fab-b6d6-f921d20b1490",
+                    "title": "vrcontrollertests.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/webvr-controllers/vrcontrollertests.xml"
+                },
+                {
+                    "id": "2199754c-a13b-4df7-a7a7-7acf31889e06",
+                    "title": "webvr.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/webvr.xml"
+                },
+                {
+                    "id": "f599c9fd-4a58-4347-86b5-cb7f76d3339c",
+                    "title": "depthmap_navigation.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/depthmap_navigation.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "da0718c6-64fa-4b50-bceb-6a785b8d7e3f",
+                    "content": "WebVR - VR 控制器"
+                },
+                {
+                    "id": "f74572d2-e80f-417b-b4c4-a7a9f37cc705",
+                    "content": "VR 控制器支持的演示。它展示了如何使用它们进行特殊的“命中测试”（检查当热点被 VR 控制器瞄准时热点会被击中的位置）以及如何设计和自定义 VR 控制器。"
+                }
+            ]
+        },
+        {
+            "id": "70c20659-3cda-4c7c-ab22-468b3184c665",
+            "title": "WebVR 无人机攻击（技术演示游戏）",
+            "type": [
+                "normal"
+            ],
+            "imgUrl": "https://krpano.com/releases/1.20.11/examples/images/webvr-drone-attack.jpg",
+            "xml": [
+                {
+                    "id": "683cf293-7df9-4edc-add6-5eeeb813a566",
+                    "title": "drone-attack.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples/webvr-drone-attack/drone-attack.xml"
+                },
+                {
+                    "id": "123",
+                    "title": "pp_hit_effect.js",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/examples//webvr-drone-attack/pp_hit_effect.js"
+                },
+                {
+                    "id": "263ac180-da78-4686-8bbc-ed75a5e29dc8",
+                    "title": "webvr.xml",
+                    "url": "https://krpano.com/viewsource.html?releases/1.20.11/examples/../viewer/plugins/webvr.xml"
+                }
+            ],
+            "content": [
+                {
+                    "id": "eaeeb27f-3feb-458c-91bf-871532c791ce",
+                    "content": "WebVR - 无人机攻击"
+                },
+                {
+                    "id": "0b6227b4-488d-4522-84cc-13589f851913",
+                    "content": "作为几个 krpano 功能的技术演示的小型简单射击游戏"
+                },
+                {
+                    "id": "032e2446-f8a5-4b8e-9dba-0a5bc3337a7f",
+                    "content": "它使用全景图像作为背景和热点作为对象（无人机、爆炸……）"
+                },
+                {
+                    "id": "e26a3902-4676-4177-ad98-045246bb2422",
+                    "content": "具有位置跟踪功能的WebVR"
+                },
+                {
+                    "id": "56fb9916-dada-4a48-93ac-8d7478e4d2f9",
+                    "content": "VR 控制器支持（没有它也能工作，但推荐使用 VR 控制器）"
+                },
+                {
+                    "id": "1d2b9cd1-bff2-4f5b-b5a4-ef0020384e86",
+                    "content": "3D音效"
+                },
+                {
+                    "id": "d7f5059b-4b8b-4e83-803b-2ca5e22b3d1e",
+                    "content": "自定义后处理"
+                },
+                {
+                    "id": "0d0df19a-a1b6-406a-920b-f960f31b5fa5",
+                    "content": "Javascript 动作"
                 }
             ]
         }

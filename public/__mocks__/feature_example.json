@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "name": "Virtual Tours",
+            "title": "虚拟游览",
+            "url": "/vtour",
+            "type": "normal"
+        },
+        {
+            "name": "Gigapixel / Multiresolution",
+            "title": "高分辨率",
+            "url": "/multires",
+            "type": "normal"
+        },
+        {
+            "name": "Panoramic Video",
+            "title": "全景影音",
+            "url": "/panovideo",
+            "type": "normal"
+        },
+        {
+            "name": "WebVR",
+            "title": "VR",
+            "url": "/webvr",
+            "type": "normal"
+        },
+        {
+            "name": "3D-Depthmaps",
+            "title": "3D景深",
+            "url": "/depthmap",
+            "type": "new"
+        },
+        {
+            "name": "Fully Customizable",
+            "title": "自由定制",
+            "url": "/",
+            "type": "normal"
+        }
+    ]
+}

@@ -1,3 +1,3 @@
-export enum FeatureExampleAction {
-    updateFeatureExample = 'updateFeatureExample',
+export enum ExampleAction {
+    GetFeatureTitle = 'getFeatureTitle',
 }

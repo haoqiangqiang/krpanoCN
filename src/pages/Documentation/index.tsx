@@ -1,7 +1,10 @@
 import React from 'react';
+import Layout from '../../components/Layout';
 
 export default () => {
     return (
-        <div>文档</div>
+        <Layout>
+            <div>文档</div>
+        </Layout>
     )
 }

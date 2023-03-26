@@ -1,16 +1,17 @@
-import { FeatureExampleAction } from '../../store/actions';
-import { fetchFeatureExamples } from '../http/fetcher';
-import { FeatureExample } from '../../interfaces/feature.interface'
+import { AxiosResponse } from 'axios';
+import { AnyAction, Dispatch } from 'redux';
+import { FeatureTitle } from '../../interfaces/example.interface';
+import { ExampleAction } from '../../store/actions';
+import { fetchFeatureTitles } from '../http/api';
 
-export const getFetureExamples = (dispatch: any) => {
-    fetchFeatureExamples().then((weappers: any) => {
-        console.log('weappers', weappers);
-        if (weappers) {
-            const featureExample: FeatureExample[] = weappers.data;
+export const getFetureTitle = (dispatch: Dispatch<AnyAction>) => {
+    fetchFeatureTitles().then((res: AxiosResponse<FeatureTitle[]>) => {
+        if (res) {
+            const featureTitle = res.data
             dispatch({
-                type: FeatureExampleAction.updateFeatureExample,
+                type: ExampleAction.GetFeatureTitle,
                 payload: [
-                    ...featureExample
+                    ...featureTitle
                 ]
             })
         }

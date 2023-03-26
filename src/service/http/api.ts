@@ -10,5 +10,6 @@ export const axiosIns = axios.create({
     }
 })
 
-export const fetchFeatureExamples = () =>
-    axiosIns.get('feature_example.json').then((res: AxiosResponse) => { return res.data })
+export const fetchFeatureTitles = () => (
+    axiosIns.get('feature_example.json')
+)

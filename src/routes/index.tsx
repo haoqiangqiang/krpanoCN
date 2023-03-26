@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, Suspense, lazy, ReactNode } from 'react';
-import { BrowserRouter as Router, Routes, Route, redirect, useLocation, Navigate } from 'react-router-dom'
-import FeatExample from '../components/featExample';
+import React, { lazy } from 'react';
+import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom'
+import Feature from '../components/Feature';
+import { CustomRouter } from '../interfaces/router.interface';
 
 
 const News = lazy(() => import('../pages/News'))
@@ -11,62 +12,64 @@ const Buy = lazy(() => import('../pages/Buy'))
 const Forum = lazy(() => import('../pages/Forum'))
 const Contact = lazy(() => import('../pages/Contact'))
 
+const WithLoadingComponent = (component: JSX.Element) => {
+    return <React.Suspense fallback={<div>Loading</div>}>
+        {component}
+    </React.Suspense>
+}
+
 const Containers: CustomRouter.Route[] = [
     {
         key: 'root',
         path: '/',
-        element: <Navigate to="/news/"/>,
+        element: <Navigate to="/news" />,
     },
     {
         key: 'news',
-        path: '/news/',
-        element: <News />,
+        path: '/news',
+        element: WithLoadingComponent(<News />),
     },
     {
         key: 'examples',
-        path: '/examples/',
-        element: <Examples />,
+        path: '/examples',
+        element: WithLoadingComponent(<Examples />),
     },
     {
         key: 'documentation',
-        path: '/documentation/',
-        element: <Documentation />,
+        path: '/documentation',
+        element: WithLoadingComponent(<Documentation />),
     },
     {
         key: 'download',
-        path: '/download/',
-        element: <Download />,
+        path: '/download',
+        element: WithLoadingComponent(<Download />),
     },
     {
         key: 'buy',
-        path: '/buy/',
-        element: <Buy />,
+        path: '/buy',
+        element: WithLoadingComponent(<Buy />),
     },
     {
         key: 'forum',
-        path: '/forum/',
-        element: <Forum />,
+        path: '/forum',
+        element: WithLoadingComponent(<Forum />),
     },
     {
         key: 'contact',
-        path: '/contact/',
-        element: <Contact />,
+        path: '/contact',
+        element: WithLoadingComponent(<Contact />),
     }
 ]
 
-export default () => {
-    return (
-        <Router>
-            <FeatExample></FeatExample>
-            <Routes>
-                {
-                    Containers.map(container => (
-                        <Route
-                            {...container}
-                        />
-                    ))
-                }
-            </Routes>
-        </Router>
-    )
-}
+const Routers = () => (
+    <BrowserRouter>
+        <Feature></Feature>
+        <Routes>
+            {Containers.map(container => (
+                <Route {...container} />
+            ))}
+        </Routes>
+    </BrowserRouter>
+)
+
+export default Routers;

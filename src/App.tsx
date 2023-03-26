@@ -10,11 +10,13 @@ const Appdiv = styled.div`
 
 const App = () => {
   return (
-    <Provider store={store}>
+    <React.StrictMode>
+      <Provider store={store}>
         <Appdiv>
           <Routers />
         </Appdiv>
-    </Provider>
+      </Provider>
+    </React.StrictMode>
   )
 }
 

@@ -13,3 +13,7 @@ export const axiosIns = axios.create({
 export const fetchAllClassify = () => (
     axiosIns.get('example_classify.json')
 )
+
+export const fetchAllExample = () => (
+    axiosIns.get('examples.json')
+)

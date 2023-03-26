@@ -13,11 +13,16 @@ export const MenuTitle = styled.span`
     outline: 0;
 `
 
-export const MenuItem= styled.span`
+export const MenuItem = styled.span`
     display: block;
     width: 100%;
     padding-bottom: 8px;
     font-size: 14px;
     color: #57595a;
     cursor: pointer;
+`
+export const ExampleTitle = styled.div`
+    font-size: 17px;
+    font-weight: bold;
+    color: #333333;
 `

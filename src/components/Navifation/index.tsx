@@ -14,6 +14,18 @@ const Navigation = () => {
             <Nav>
                 <Link to='/documentation'>文档</Link>
             </Nav>
+            <Nav>
+                <Link to='/download'>下载</Link>
+            </Nav>
+            <Nav>
+                <Link to='/buy'>购买</Link>
+            </Nav>
+            <Nav>
+                <Link to='/forum'>论坛</Link>
+            </Nav>
+            <Nav>
+                <Link to='/contact'>联系</Link>
+            </Nav>
         </NavBox>
     )
 }

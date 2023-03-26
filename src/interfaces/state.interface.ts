@@ -1,4 +1,4 @@
-import { Classify } from "./example.interface"
+import { Classify, Example } from "./example.interface"
 
 export declare namespace State {
     export interface AppState {
@@ -7,6 +7,8 @@ export declare namespace State {
     export interface ExampleState {
         features: Classify[],
         normalClassify: Classify[],
+        examples: Example[],
+        classifyExamples: Example[],
     }
 
 }

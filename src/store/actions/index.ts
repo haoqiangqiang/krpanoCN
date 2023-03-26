@@ -1,3 +1,4 @@
 export enum ExampleAction {
-    GetFeatureTitle = 'getFeatureTitle',
+    GetFeatureExampleClassify = 'getFeatureExampleClassify',
+    GetNormalExampleClassify = 'getNormalExampleClassify',
 }

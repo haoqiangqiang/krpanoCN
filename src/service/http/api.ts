@@ -10,6 +10,6 @@ export const axiosIns = axios.create({
     }
 })
 
-export const fetchFeatureTitles = () => (
-    axiosIns.get('feature_example.json')
+export const fetchAllClassify = () => (
+    axiosIns.get('example_classify.json')
 )

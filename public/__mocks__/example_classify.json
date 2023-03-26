@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Virtual Tours",
+        "title": "虚拟游览",
+        "classify": "vtour",
+        "type": "normal",
+        "feature": true
+    },
+    {
+        "name": "Gigapixel / Multiresolution",
+        "title": "高分辨率",
+        "classify": "multires",
+        "type": "normal",
+        "feature": true
+    },
+    {
+        "name": "Panoramic Video",
+        "title": "全景影音",
+        "classify": "panovideo",
+        "type": "normal",
+        "feature": true
+    },
+    {
+        "name": "WebVR",
+        "title": "VR",
+        "classify": "webvr",
+        "type": "normal",
+        "feature": true
+    },
+    {
+        "name": "3D-Depthmaps",
+        "title": "3D景深",
+        "classify": "depthmap",
+        "type": "new",
+        "feature": true
+    },
+    {
+        "name": "Fully Customizable",
+        "title": "自由定制",
+        "classify": "",
+        "type": "normal",
+        "feature": true
+    },
+    {
+        "name": "Show All",
+        "title": "全部",
+        "classify": "",
+        "type": "normal",
+        "feature": false
+    },
+    {
+        "name": "Depthmap",
+        "title": "景深",
+        "classify": "depthmap",
+        "type": "normal",
+        "feature": false
+    },
+    {
+        "name": "Javascript",
+        "title": "Javascript",
+        "classify": "js",
+        "type": "normal",
+        "feature": false
+    },
+    {
+        "name": "Multiresolution",
+        "title": "高分辨率",
+        "classify": "multires",
+        "type": "normal",
+        "feature": false
+    },
+    {
+        "name": "Panoramic Video",
+        "title": "全景影音",
+        "classify": "panovideo",
+        "type": "normal",
+        "feature": false
+    },
+    {
+        "name": "Virtual Tours",
+        "title": "虚拟游览",
+        "classify": "vtour",
+        "type": "normal",
+        "feature": false
+    },
+    {
+        "name": "WebVR",
+        "title": "VR",
+        "classify": "webvr",
+        "type": "normal",
+        "feature": false
+    }
+]

@@ -1,15 +1,21 @@
 import { ExampleAction } from "../store/actions";
 
-export interface FeatureTitle {
+export interface Classify {
     name: string,
     title: string,
-    url: string,
+    classify: string,
     type: 'normal' | 'new',
+    feature: boolean,
 }
 
-export interface GetFeatureTitleAction {
-    type: typeof ExampleAction.GetFeatureTitle
-    payload: FeatureTitle[]
+export interface GetAllExampleClassifyAction {
+    type: typeof ExampleAction.GetFeatureExampleClassify,
+    payload: Classify[],
 }
 
-export type ExampleUnionType = GetFeatureTitleAction
+export interface GetGroupExampleClassifyAction {
+    type: typeof ExampleAction.GetNormalExampleClassify,
+    payload: Classify[],
+}
+
+export type ExampleUnionType = GetAllExampleClassifyAction | GetGroupExampleClassifyAction;

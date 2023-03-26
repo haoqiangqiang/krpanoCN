@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { FeatureContainer } from "./styled";
+import { FeatureContainer, FeatureExampleTitle } from "./styled";
 import { useDispatch, useSelector } from 'react-redux';
-import { getFetureTitle } from "../../service/app/example";
+import { getFeatureExampleClassify, switchExampleClass } from "../../service/app/example";
 import { State } from "../../interfaces/state.interface";
 
 
@@ -12,15 +12,19 @@ const Feature = () => {
     const { features } = useSelector<State.AppState, State.ExampleState>(state => state.example);
 
     useEffect(() => {
-        getFetureTitle(dispatch)
+        getFeatureExampleClassify(dispatch);
     }, [dispatch])
+
+    const onExampleClassifyClick = (classify: string) => {
+        switchExampleClass(classify, dispatch)
+    }
 
     return (
         <FeatureContainer>
-            <span>经典案例:</span>
+            <FeatureExampleTitle type='label'>经典案例:</FeatureExampleTitle>
             {
                 features.map(feature => (
-                    <span key={feature.name}>{feature.title}</span>
+                    <FeatureExampleTitle type='normal' onClick={() => onExampleClassifyClick(feature.classify)} key={feature.name}>{feature.title}</FeatureExampleTitle>
                 ))
             }
 

@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from "react";
 import { TitleBlock } from "./styled";
 interface Props {
     level: number,
-    children: string
+    children: ReactNode | string
 }
 
 const Title: FC<Props> = ({ level, children }) => {

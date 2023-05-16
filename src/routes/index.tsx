@@ -3,7 +3,7 @@ import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom'
 import Feature from '../components/Feature';
 import { CustomRouter } from '../interfaces/router.interface';
 
-
+const Home = lazy(() => import('../pages/Home'))
 const News = lazy(() => import('../pages/News'))
 const Examples = lazy(() => import('../pages/Examples'))
 const Documentation = lazy(() => import('../pages/Documentation'))
@@ -22,7 +22,12 @@ const Containers: CustomRouter.Route[] = [
     {
         key: 'root',
         path: '/',
-        element: <Navigate to="/news" />,
+        element: <Navigate to="/home" />,
+    },
+    {
+        key: 'home',
+        path: '/home',
+        element: WithLoadingComponent(<Home />),
     },
     {
         key: 'news',

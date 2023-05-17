@@ -1,3 +1,8 @@
 li {
     margin-bottom: 5px;
 }
+
+a {
+    color: #57595a;
+    font-weight: bold;
+}

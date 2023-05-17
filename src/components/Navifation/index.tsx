@@ -6,6 +6,9 @@ const Navigation = () => {
     return (
         <NavBox>
             <Nav>
+                <Link to='/home'>首页</Link>
+            </Nav>
+            <Nav>
                 <Link to='/news'>新闻</Link>
             </Nav>
             <Nav>

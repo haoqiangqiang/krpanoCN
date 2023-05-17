@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import Main from "../../components/Main";
 import Title from "../../components/Title";
 import ContentBox from '../../components/Content';
+import { Link } from "react-router-dom";
 
 export default () => {
     const Menu = () => {
@@ -32,11 +33,25 @@ export default () => {
                         <li><u>没有外部依赖</u> - 所有代码都是在内部开发和维护的。</li>
                     </ul>
                 </ContentBox>
+
+                <Title level={2}>最新动态</Title>
+                <ContentBox>
+                    <p>一个简短的视频播放列表(共7个视频)，其中包含一些最新的 krpano 功能(1.20 版)</p>
+                    <audio></audio>
+                </ContentBox>
+
+                <Title level={2}>简单使用 - Droplets & Virtual Tour Editor</Title>
+                <ContentBox>
+                    <p>krpano 的主要使用案例之一是构建自定义解决方案，例如自己的自定义虚拟游览用户界面，但也包含几个辅助程序，用于快速构建简单且随时可用的虚拟游览。这里有一些使用视频：</p>
+                    <audio></audio>
+                </ContentBox>
+
+                <Title level={2}>高级用法 - XML 和操作 API</Title>
+                <ContentBox>
+                    <p>对于更高级的用法，krpano 将与其布局和脚本 API 一起使用。这可以使用 krpano XML 系统和 krpano 动作脚本或 Javascript 来完成，也可以使用 HTML/CSS 和 Javascript 来完成。从这里开始，请查看包含<Link to='/examples'>示例</Link>的 xml 文件，并在此处查看 <Link to='/documentation/xml'>XML 参考</Link>和<Link to='/documentation/actions'>操作/脚本</Link>文档</p>
+                </ContentBox>
             </>
         )
-    }
-    const Describe = () => {
-        
     }
     return (
         <Layout>

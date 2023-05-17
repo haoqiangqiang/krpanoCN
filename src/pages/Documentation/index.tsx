@@ -1,10 +1,24 @@
-import React from 'react';
-import Layout from '../../components/Layout';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Layout from "../../components/Layout";
+import Main from "../../components/Main";
+import MenuBlock from "../../components/Menu";
+import { documentationMenu } from "../../service/app/documentation";
 
 export default () => {
+    const Menu = () => {
+        return (
+            <MenuBlock menu={documentationMenu}></MenuBlock>
+        )
+    }
+    const Content = () => {
+        return (
+            <Outlet></Outlet>
+        )
+    }
     return (
         <Layout>
-            <div>文档</div>
+            <Main leftMenu={Menu()} content={Content()}></Main>
         </Layout>
     )
 }

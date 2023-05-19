@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { Link } from "react-router-dom";
+import React, { FC, Fragment } from "react";
+import { useNavigate } from "react-router-dom";
 import { Menu } from "../../interfaces/common.interface";
 import { MenuItem, MenuTitle } from "./styled";
 
@@ -8,16 +8,20 @@ interface Props {
 }
 
 const MenuBlock: FC<Props> = ({ menu }) => {
+    const navigate = useNavigate()
+    const linkTo = (menuItem: Menu) => {
+        navigate(menuItem.link!)
+    }
     return (
         <>
             {
                 menu.map((menuItem) => (
-                    <>
+                    <Fragment key={menuItem.title}>
                         <MenuTitle>{menuItem.label}</MenuTitle>
                         {menuItem.child && menuItem.child.map((menuChildItem) => (
-                            <Link to='menuChildItem.link'><MenuItem>{menuChildItem.label}</MenuItem></Link>
+                            <MenuItem key={menuChildItem.title}><span onClick={() => linkTo(menuChildItem)!}>{menuChildItem.label}</span></MenuItem>
                         ))}
-                    </>
+                    </Fragment>
                 ))
             }
         </>

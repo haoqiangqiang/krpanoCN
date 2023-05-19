@@ -9,15 +9,15 @@ export const MenuTitle = styled.span`
     font-weight: 600;
     color: #333;
     text-decoration: none;
-    cursor: pointer;
     outline: 0;
 `
 
-export const MenuItem = styled.span`
-    display: block;
-    width: 100%;
+export const MenuItem = styled.div`
     padding-bottom: 8px;
     font-size: 14px;
     color: #57595a;
-    cursor: pointer;
+    span {
+        cursor: pointer;
+    }
+
 `

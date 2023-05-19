@@ -12,6 +12,9 @@ const Buy = lazy(() => import('../pages/Buy'))
 const Forum = lazy(() => import('../pages/Forum'))
 const Contact = lazy(() => import('../pages/Contact'))
 
+const Xml = lazy(() => import('../pages/Documentation/XML'))
+const Embedding = lazy(() => import('../pages/Documentation/Embedding'))
+
 const WithLoadingComponent = (component: JSX.Element) => {
     return <React.Suspense fallback={<div>Loading</div>}>
         {component}
@@ -40,11 +43,6 @@ const Containers: CustomRouter.Route[] = [
         element: WithLoadingComponent(<Examples />),
     },
     {
-        key: 'documentation',
-        path: '/documentation',
-        element: WithLoadingComponent(<Documentation />),
-    },
-    {
         key: 'download',
         path: '/download',
         element: WithLoadingComponent(<Download />),
@@ -66,6 +64,24 @@ const Containers: CustomRouter.Route[] = [
     }
 ]
 
+let documentationContainers: CustomRouter.Route[] = [
+    {
+        key: 'documentation_root',
+        path: '/documentation',
+        element: <Navigate to="/documentation/xml" />,
+    },
+    {
+        key: 'xml',
+        path: '/documentation/xml',
+        element: WithLoadingComponent(<Xml />)
+    },
+    {
+        key: 'embedding',
+        path: '/documentation/embedding',
+        element: WithLoadingComponent(<Embedding />)
+    }
+]
+
 const Routers = () => (
     <BrowserRouter>
         <Feature></Feature>
@@ -73,6 +89,11 @@ const Routers = () => (
             {Containers.map(container => (
                 <Route {...container} />
             ))}
+            <Route key='documentation' path='/documentation' element={WithLoadingComponent(<Documentation />)}>
+                {documentationContainers.map(container => (
+                    <Route {...container} />
+                ))}
+            </Route>
         </Routes>
     </BrowserRouter>
 )

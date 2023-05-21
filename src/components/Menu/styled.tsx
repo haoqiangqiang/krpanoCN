@@ -18,6 +18,7 @@ export const MenuItem = styled.div`
     color: #57595a;
     span {
         cursor: pointer;
+        text-decoration: underline;
     }
 
 `

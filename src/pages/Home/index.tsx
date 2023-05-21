@@ -55,7 +55,7 @@ export default () => {
 
                 <Title level={2}>高级用法 - XML 和操作 API</Title>
                 <ContentBox>
-                    <p>对于更高级的用法，krpano 将与其布局和脚本 API 一起使用。这可以使用 krpano XML 系统和 krpano 动作脚本或 Javascript 来完成，也可以使用 HTML/CSS 和 Javascript 来完成。从这里开始，请查看包含<Link to='/examples'>示例</Link>的 xml 文件，并在此处查看 <Link to='/documentation/xml'>XML 参考</Link>和<Link to='/documentation/actions'>操作/脚本</Link>文档</p>
+                    <p>对于更高级的用法，krpano 将与其布局和脚本 API 一起使用。这可以使用 krpano XML 系统和 krpano ActionsScript 或 Javascript 来完成，也可以使用 HTML/CSS 和 Javascript 来完成。从这里开始，请查看包含<Link to='/examples'>示例</Link>的 xml 文件，并在此处查看 <Link to='/documentation/xml'>XML 参考</Link>和<Link to='/documentation/actions'>ActionScript</Link>文档</p>
                 </ContentBox>
             </>
         )

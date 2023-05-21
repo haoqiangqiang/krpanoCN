@@ -25,7 +25,7 @@ export const documentationMenu = [
             },
             {
                 title: 'Actions / Scripting',
-                label: 'Actions 脚本',
+                label: 'ActionScript',
                 link: '/documentation/actions',
             },
             {

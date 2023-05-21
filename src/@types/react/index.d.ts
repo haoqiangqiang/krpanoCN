@@ -37,3 +37,11 @@
 //         element?: any,
 //     }
 // }
+declare namespace React {
+    interface IframeHTMLAttributes<T> extends HTMLAttributes<T> {
+        border: string;
+        frameborder: string;
+        framespacing: string;
+        allowfullscreen: string;
+    }
+}

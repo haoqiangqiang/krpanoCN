@@ -31,19 +31,26 @@ export default () => {
                         <li><u>小文件大小</u> - 即使有很多功能，也会不断优化以保持文件大小尽可能小，以实现更快的加载和更快的启动。</li>
                         <li><u>稳定的 API </u> - krpano 被设计为向上兼容。使用旧版本创建的内容在大多数情况下应该可以在新版本中使用而无需任何更改。</li>
                         <li><u>没有外部依赖</u> - 所有代码都是在内部开发和维护的。</li>
-                    </ul>
+                    </ul>                           
                 </ContentBox>
 
                 <Title level={2}>最新动态</Title>
                 <ContentBox>
                     <p>一个简短的视频播放列表(共7个视频)，其中包含一些最新的 krpano 功能(1.20 版)</p>
-                    <audio></audio>
+                    <iframe src="//player.bilibili.com/player.html?aid=571479117&bvid=BV13z4y1B7oG&cid=1136669750&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+                    <iframe src="//player.bilibili.com/player.html?aid=741409500&bvid=BV1yk4y1s72x&cid=1136670815&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                    <iframe src="//player.bilibili.com/player.html?aid=911436283&bvid=BV19M4y1q7cp&cid=1136671404&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                    <iframe src="//player.bilibili.com/player.html?aid=911436703&bvid=BV19M4y1q7gS&cid=1136672113&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                    <iframe src="//player.bilibili.com/player.html?aid=741379755&bvid=BV1ek4y1s7uE&cid=1136672456&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                    <iframe src="//player.bilibili.com/player.html?aid=486428625&bvid=BV1LT41147KE&cid=1136673488&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                    <iframe src="//player.bilibili.com/player.html?aid=528988271&bvid=BV14u41147Bg&cid=1136674459&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
                 </ContentBox>
 
                 <Title level={2}>简单使用 - Droplets & Virtual Tour Editor</Title>
                 <ContentBox>
                     <p>krpano 的主要使用案例之一是构建自定义解决方案，例如自己的自定义虚拟游览用户界面，但也包含几个辅助程序，用于快速构建简单且随时可用的虚拟游览。这里有一些使用视频：</p>
-                    <audio></audio>
+                    <iframe src="//player.bilibili.com/player.html?aid=911464024&bvid=BV1wM4y1B7o8&cid=1136675070&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                    <iframe src="//player.bilibili.com/player.html?aid=401460533&bvid=BV1md4y1Z7iM&cid=1136678586&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
                 </ContentBox>
 
                 <Title level={2}>高级用法 - XML 和操作 API</Title>

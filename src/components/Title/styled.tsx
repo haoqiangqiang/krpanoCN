@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const TitleBlock = styled.div`
-    display: inline-block;
-    margin-top: 5px;
+    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: bolder;
     font-size: ${(props: { level: number }) => {

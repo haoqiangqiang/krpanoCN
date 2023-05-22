@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LinkContainer = styled.div`
+export const LinkContainer = styled.span`
     
 `
 

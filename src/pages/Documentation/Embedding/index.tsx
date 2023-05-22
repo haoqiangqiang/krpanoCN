@@ -5,6 +5,7 @@ import Code from "../../../components/Code";
 import LinkBox from "../../../components/Link";
 import Function from "../../../components/Function";
 import { useSearchParams } from "react-router-dom";
+import Note from "../../../components/Note";
 export default () => {
     const [search, setSearch] = useSearchParams();
     const id = search.get('id')
@@ -89,6 +90,29 @@ export default () => {
                         <li>设置应该嵌入全景图查看器的目标 html 元素。</li>
                         <li>可以是 html 元素的 id 或者 html 元素本身。</li>
                         <li>当没有设置 target 或者找不到相应 id 的 html 元素时，将会出现 javascript alert（） 错误。</li>
+                    </ul>
+                </Function>
+                <Function id="bgcolor" header={<Content><LinkBox to="/documentation/embedding?id=bgcolor">bgcolor</LinkBox><span>{`: '#000000'`}</span></Content>}>
+                    <ul>
+                        <li>查看器的背景颜色（html 颜色格式）。</li>
+                        <li>默认背景色为<Code>#000000</Code>（黑色）。</li>
+                        <li>可选值<Code>transparent</Code>可用于查看全景图背后的内容（网站，<LinkBox to="/docimentation/xml#layerParent">bglayer</LinkBox>层）</li>
+                    </ul>
+                    <Content><Note>注意：当使用透明背景时，仅支持正常的交叉淡入淡出<LinkBox to="/docimentation/actions#loadpanoBlend">全景混合</LinkBox></Note></Content>
+                </Function>
+                <Function id="vars" header={<Content><LinkBox to="/documentation/embedding?id=vars">vars</LinkBox><span>{`: {...}`}</span></Content>}>
+                    <ul>
+                        <li>传递携带 krpano <Note>变量：值</Note>对的 javascript 对象</li>
+                        <li>变量将在 xml 文件加载和解析之后设置。<br />因此，这些变量可以用于添加新设置或者覆盖 xml 中已经定义好的设置。</li>
+                        <li>
+                            示例：<br />
+                            <Code code={true}>
+                                <Content>{`var settings = {};`}</Content>
+                                <Content>{`settings["onstart"] = "trace('on start...')";`}</Content>
+                                <Content>{`settings["view.hlookat"] = 30;`}</Content>
+                                <Content>{`embedpano({xml:"pano.xml", target:"pano", vars:settings});`}</Content>
+                            </Code>
+                        </li>
                     </ul>
                 </Function>
             </Content>

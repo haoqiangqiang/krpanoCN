@@ -5,5 +5,6 @@ export declare namespace CustomRouter {
         params?: string,
         exact?: boolean,
         element?: any,
+        children?: Route[],
     }
 }

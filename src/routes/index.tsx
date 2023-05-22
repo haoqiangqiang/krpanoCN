@@ -1,6 +1,5 @@
 import React, { lazy } from 'react';
-import { Routes, Route, Navigate, BrowserRouter } from 'react-router-dom'
-import Feature from '../components/Feature';
+import { Navigate, createBrowserRouter } from 'react-router-dom'
 import { CustomRouter } from '../interfaces/router.interface';
 
 const Home = lazy(() => import('../pages/Home'))
@@ -43,6 +42,28 @@ const Containers: CustomRouter.Route[] = [
         element: WithLoadingComponent(<Examples />),
     },
     {
+        key: 'documation',
+        path: '/documentation',
+        element: WithLoadingComponent(<Documentation />),
+        children: [
+            {
+                key: 'documentation_root',
+                path: '/documentation',
+                element: <Navigate to="/documentation/xml" />,
+            },
+            {
+                key: 'xml',
+                path: '/documentation/xml',
+                element: WithLoadingComponent(<Xml />)
+            },
+            {
+                key: 'embedding',
+                path: '/documentation/embedding',
+                element: WithLoadingComponent(<Embedding />)
+            }
+        ]
+    },
+    {
         key: 'download',
         path: '/download',
         element: WithLoadingComponent(<Download />),
@@ -64,38 +85,6 @@ const Containers: CustomRouter.Route[] = [
     }
 ]
 
-let documentationContainers: CustomRouter.Route[] = [
-    {
-        key: 'documentation_root',
-        path: '/documentation',
-        element: <Navigate to="/documentation/xml" />,
-    },
-    {
-        key: 'xml',
-        path: '/documentation/xml',
-        element: WithLoadingComponent(<Xml />)
-    },
-    {
-        key: 'embedding',
-        path: '/documentation/embedding',
-        element: WithLoadingComponent(<Embedding />)
-    }
-]
-
-const Routers = () => (
-    <BrowserRouter>
-        <Feature></Feature>
-        <Routes>
-            {Containers.map(container => (
-                <Route {...container} />
-            ))}
-            <Route key='documentation' path='/documentation' element={WithLoadingComponent(<Documentation />)}>
-                {documentationContainers.map(container => (
-                    <Route {...container} />
-                ))}
-            </Route>
-        </Routes>
-    </BrowserRouter>
-)
+const Routers = createBrowserRouter(Containers)
 
 export default Routers;

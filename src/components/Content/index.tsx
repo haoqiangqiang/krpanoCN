@@ -1,13 +1,14 @@
 import React, { FC, ReactNode } from "react";
 import { ContentBlock } from "./styled";
 interface Props {
-    children: ReactNode | string
+    id?: string;
+    children: ReactNode | string;
 }
 
-const Title: FC<Props> = ({ children }) => {
+const Content: FC<Props> = ({ id, children }) => {
     return (
-        <ContentBlock>{children}</ContentBlock>
+        <ContentBlock id={id}>{children}</ContentBlock>
     )
 }
 
-export default Title;
+export default Content;

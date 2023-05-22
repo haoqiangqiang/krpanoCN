@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const FunctionBox = styled.div`
+    margin: 15px 0;
 `
 
 export const FunctionHeader = styled.div`

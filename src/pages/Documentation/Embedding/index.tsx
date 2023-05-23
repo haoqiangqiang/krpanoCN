@@ -85,6 +85,7 @@ export default () => {
                         </ul>
                     </Content>
                 </Function>
+
                 <Function id="target" header={<Content><LinkBox to="/documentation/embedding?id=target">target</LinkBox><span>{`: '...'`}</span></Content>}>
                     <ul>
                         <li>设置应该嵌入全景图查看器的目标 html 元素。</li>
@@ -92,6 +93,7 @@ export default () => {
                         <li>当没有设置 target 或者找不到相应 id 的 html 元素时，将会出现 javascript alert（） 错误。</li>
                     </ul>
                 </Function>
+
                 <Function id="bgcolor" header={<Content><LinkBox to="/documentation/embedding?id=bgcolor">bgcolor</LinkBox><span>{`: '#000000'`}</span></Content>}>
                     <ul>
                         <li>查看器的背景颜色（html 颜色格式）。</li>
@@ -100,6 +102,7 @@ export default () => {
                     </ul>
                     <Content><Note>注意：当使用透明背景时，仅支持正常的交叉淡入淡出<LinkBox to="/docimentation/actions#loadpanoBlend">全景混合</LinkBox></Note></Content>
                 </Function>
+
                 <Function id="vars" header={<Content><LinkBox to="/documentation/embedding?id=vars">vars</LinkBox><span>{`: {...}`}</span></Content>}>
                     <ul>
                         <li>传递携带 krpano <Note>变量：值</Note>对的 javascript 对象</li>
@@ -201,6 +204,34 @@ export default () => {
                         <li>
                             <Content>注意 - 取决于浏览器和设备，单个网页上的 WebGL 元素数量是有限的（例如，只有 8 个 WebGL 元素）。当请求更多 WebGL 元素时，最近最少使用的元素将被释放。</Content>
                             <Content>在一个网页上放置多个全景图时需要考虑这一点。对于简单的 panos/tours，可以选择为此用例禁用 WebGL。</Content>
+                        </li>
+                <Function id="webglsettings" header={<Content><LinkBox to="/documentation/embedding?id=webglsettings">webglsettings</LinkBox><span>{`: {preserveDrawingBuffer: false, depth: true, stencil: true, ...}`}</span></Content>}>
+                    <ul>
+                        <li>为 WebGL 上下文的创建传递具有特殊参数设置的对象</li>
+                        <li>WebGL 上下文将会在启动的时候创建并且在运行中无法更改，所以这些设置需要在 embedding 期间指定。</li>
+                        <li>可用设置：
+                            <ul>
+                                <li>
+                                    <Content><LinkBox to="">webgl2</LinkBox> - 尝试使用可用的 WebGL 2.0 API。目前默认设置为 false, 因为仍处于实验阶段，尚未在所有的系统上进行全面测试。</Content>
+                                    <Content>目前 WebGL2 在 krpano 上应用的优势：</Content>
+                                    <Content>
+                                        <ul>
+                                            <li>非二次方纹理也可以使用 mipmapping。</li>
+                                            <li>非二次方纹理无需着色器解决方案也可以使用可重复的纹理坐标（某些 .obj 3D-Models 需要）</li>
+                                        </ul>
+                                    </Content>
+                                </li>
+                                <li>
+                                    <Content><LinkBox to="">preserveDrawingBuffer</LinkBox> - 保留绘图缓存区的内容。在某些浏览器中通过 toDataURL 或 readPixels 获取 WebGL canvas 屏幕截图时需要启用。默认情况下设置为 false 以获取更好的性能。</Content>
+                                </li>
+                                <li><Content><LinkBox to="">depth</LinkBox> - 创建一个深度缓存区，需要深度图支持和 3d-object 渲染。默认设置为 true, 不需要的时候可以禁用。</Content></li>
+                                <li><Content><LinkBox to="">stencil</LinkBox> - 创建一个模板缓存区，当使用 alpha 透明线条边框颜色去正确的绘制多边形热点线条时需要。默认设置为 true, 不要要的时候可以禁用。</Content></li>
+                                <li><Content><LinkBox to="">faillfMajorPerformanceCaveat</LinkBox> - 当渲染性能明显低于本机应用程序的 OpenGL 渲染性能时，不要使用 WebGL。默认设置成 false。</Content></li>
+                                <li>
+                                    <Content><LinkBox to="">antialias</LinkBox> - 设置是否抗锯齿。 true 或者 false。</Content>
+                                    <Content>如果未设置，krpano 将自行决定最佳性能，因为一些 设备/浏览器/gpu 组合在启用抗锯齿的情况下性能表现的特别糟糕（例如：半帧率）。<Note>此设置应仅应用于内部测试或者特别特殊的情况。</Note></Content>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </Function>

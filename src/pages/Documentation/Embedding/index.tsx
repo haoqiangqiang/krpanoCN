@@ -272,6 +272,13 @@ export default () => {
                         </li>
                     </ul>
                 </Function>
+
+                <Function id="mobilescale" header={<Content><LinkBox to="/documentation/embedding?id=mobilescale">mobilescale</LinkBox><span>{`: 1.0`}</span></Content>}>
+                    <ul>
+                        <li>为移动设备选择使用不同全局比例的设置。</li>
+                        <li>另请参阅 xml <LinkBox to="/documentation/actions?id=stagescale">stagescale</LinkBox>设置。</li>
+                    </ul>
+                </Function>
             </Content>
         </>
     )

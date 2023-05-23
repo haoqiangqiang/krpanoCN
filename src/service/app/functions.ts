@@ -5,4 +5,6 @@ export enum Functions {
     bgcolor = '/documentation/embedding?id=bgcolor',
     vars = '/documentation/embedding?id=vars',
     webglsettings = '/documentation/embedding?id=webglsettings',
+    webxr = '/documentation/embedding?id=webxr',
+    mobilescale = '/documentation/embedding?id=mobilescale',
 }

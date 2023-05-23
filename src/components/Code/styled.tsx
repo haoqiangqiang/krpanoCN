@@ -11,7 +11,7 @@ export const CodeBox = styled.span`
 `
 
 export const CodeContainer = styled.div`
-    max-height: 300px;
+    /* max-height: 300px; */
     background-color: #ffffff;
     border: 1px solid #8da4b7;
     padding: 5px;

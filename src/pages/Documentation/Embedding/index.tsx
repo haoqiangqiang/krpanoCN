@@ -320,6 +320,38 @@ export default () => {
                         <li><Note>注意：此设置仅用于内部测试，切勿在生产环境中使用。</Note></li>
                     </ul>
                 </Function>
+
+                <Function id="onready" header={<Content><LinkBox to="/documentation/embedding?id=onready">onready</LinkBox><span>{`: ...javascript-Callback-Function...`}</span></Content>}>
+                    <ul>
+                        <li>onready 设置可用于设置回调函数，以便再嵌入完成后且 krpano 查看器准备好使用时能够得到通知。</li>
+                        <li>将通过使用 <LinkBox to="/documentation/plugins?id=krpanoInterface">krpano 接口对象</LinkBox>作为参数来调用所给出的函数。</li>
+                        <li>
+                            <Content>示例：</Content>
+                            <Code code={true}>
+                                <Content>{`embedpano({target: 'id-of-your-div', onready: function(krpano) {`}</Content>
+                                <Content>&emsp;{`console.log('krpano is ready - version =' + krpano.version);`}</Content>
+                                <Content>&emsp;{`krpano.actions.loadpano('pano.xml', null, null, null, function(){`}</Content>
+                                <Content>&emsp;&emsp;{`var hs = krpano.addhotspot();`}</Content>
+                                <Content>&emsp;&emsp;{`hs.type = 'text';`}</Content>
+                                <Content>&emsp;&emsp;{`hs.html = 'Test Hotspot';`}</Content>
+                                <Content>&emsp;&emsp;{`hs.ath = 20;`}</Content>
+                                <Content>&emsp;&emsp;{`hs.atv = 10;`}</Content>
+                                <Content>&emsp;&emsp;{`hs.onclick = function() {`}</Content>
+                                <Content>&emsp;&emsp;&emsp;{`alert('Test'); `}</Content>
+                                <Content>&emsp;&emsp;{`}`}</Content>
+                                <Content>&emsp;{`})`}</Content>
+                                <Content>{`}})`}</Content>
+                            </Code>
+                        </li>
+                    </ul>
+                </Function>
+
+                <Function id="onerror" header={<Content><LinkBox to="/documentation/embedding?id=onerror">onerror</LinkBox><span>{`: ...javascript-Callback-Function...`}</span></Content>}>
+                    <ul>
+                        <li>onerror 设置可用于设置自定义嵌入错误处理函数。</li>
+                        <li>将使用错误消息字符串作为参数调用指定函数。</li>
+                    </ul>
+                </Function>
             </Content>
         </>
     )

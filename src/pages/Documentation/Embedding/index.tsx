@@ -279,6 +279,47 @@ export default () => {
                         <li>另请参阅 xml <LinkBox to="/documentation/actions?id=stagescale">stagescale</LinkBox>设置。</li>
                     </ul>
                 </Function>
+
+                <Function id="safearea" header={<Content><LinkBox to="/documentation/embedding?id=safearea">safearea</LinkBox><span>{`: 'auto'`}</span></Content>}>
+                    <ul>
+                        <li>启用或禁用一般<LinkBox to="/documentation/xml?id=displaySafeArea">Safe-Area</LinkBox>支持（适用于带槽口的 ios 设备）。</li>
+                        <li>
+                            <Content>可用设置：</Content>
+                            <ul>
+                                <li>
+                                    <Content><Code>auto</Code>（默认）- 当查看器嵌入全屏 html 元素时，自动启用安全区域支持。</Content>
+                                </li>
+                                <li>
+                                    <Content><Code>true</Code> - 始终启用安全区域支持，当嵌入目标 html 元素在嵌入期间不是全屏大小时也可以使用。</Content>
+                                </li>
+                                <li>
+                                    <Content><Code>false</Code> - 禁用安全区域支持。</Content>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <Content><Note>注意：在 html 文件中，需要在 {`<head>`} 元素中设置此 {`meta`} 才能够使用安全区域</Note></Content>
+                            <Code code={true}>
+                                <Content>{`<meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover'>`}</Content>
+                            </Code>
+                        </li>
+                        <li>更多信息请查看：<LinkBox to="">krpano Forum Post</LinkBox></li>
+                    </ul>
+                </Function>
+
+                <Function id="touchdevicemousesupport" header={<Content><LinkBox to="/documentation/embedding?id=touchdevicemousesupport">touchdevicemousesupport</LinkBox><span>{`: true`}</span></Content>}>
+                    <ul>
+                        <li>用于选择性地禁用触摸设备上的鼠标支持的设置。</li>
+                    </ul>
+                </Function>
+
+                <Function id="fakedevice" header={<Content><LinkBox to="/documentation/embedding?id=fakedevice">fakedevice</LinkBox><span>{`: ''`}</span></Content>}>
+                    <ul>
+                        <li>伪造 krpano <LinkBox to="/documentation/xml?id=devicesNotes">device</LinkBox>检测设置</li>
+                        <li>可用设置：'mobile', 'tablet', 'desktop'。（手机，平板电脑，电脑）</li>
+                        <li><Note>注意：此设置仅用于内部测试，切勿在生产环境中使用。</Note></li>
+                    </ul>
+                </Function>
             </Content>
         </>
     )

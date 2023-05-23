@@ -7,4 +7,7 @@ export enum Functions {
     webglsettings = '/documentation/embedding?id=webglsettings',
     webxr = '/documentation/embedding?id=webxr',
     mobilescale = '/documentation/embedding?id=mobilescale',
+    safearea = '/documentation/embedding?id=safearea',
+    touchdevicemousesupport = '/documentation/embedding?id=touchdevicemousesupport',
+    fakedevice = '/documentation/embedding?id=fakedevice',
 }

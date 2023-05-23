@@ -115,6 +115,95 @@ export default () => {
                         </li>
                     </ul>
                 </Function>
+
+                <Function id="initvars" header={<Content><LinkBox to="/documentation/embedding?id=initvars">initvars</LinkBox><span>{`: {...}`}</span></Content>}>
+                    <ul>
+                        <li>传递携带 krpano <Note>变量：值</Note>对的 javascript 对象。</li>
+                        <li>这与 <LinkBox to="/documentation/embedding?id=vars">vars</LinkBox> 设置基本相同，但这些变量需要在加载和解析 xml <Note>之前</Note>设置。</li>
+                        <li>该设置的主要用途是设置自定义路径变量，这些变量可用于 xml 文件中 <LinkBox to="/documentation/xml?id=urlNotes">url_paths</LinkBox>内的<LinkBox to="/documentation/xml?id=urlNotes">placeholders</LinkBox>, 或设置可在<LinkBox to="/documentation/xml?id=include">{`<include>`}</LinkBox>元素的 <LinkBox to="/documentation/xml?id=if">xml-if-checks</LinkBox>中使用的变量</li>
+                        <li>
+                            <Content>示例：</Content>
+                            <Code code={true}>{`embedpano({..., initvars: {mypath: './panos1/'}});`}</Code>
+                            <Content>XML:</Content>
+                            <Code code={true}>{`url='%$mypath%image.jpg'`}</Code>
+                        </li>
+                        <li>
+                            <Content>为了能够直接在 html 文件的 url 处通过 <LinkBox to="/documentation/xml?id=passQueryParameters">http_queries</LinkBox> 来传递 <LinkBox to="/documentation/embedding?id=initvars">initvars</LinkBox> 变量，需要使用以下语法：</Content>
+                            <Code code={true}>{`tour.html?initvars.variable=value`}</Code>
+                        </li>
+                    </ul>
+                </Function>
+
+                <Function id="basepath" header={<Content><LinkBox to="/documentation/embedding?id=basepath">basepath</LinkBox><span>{`: ...`}</span></Content>}>
+                    <li>设置用于解析相对于 krpano 查看器 url 路径的自定义路径。</li>
+                    <li>注意：更改此项参数会影响<Code>{`%VIEWER%`}</Code> url 占位符。</li>
+                </Function>
+
+                <Function id="consolelog" header={<Content><LinkBox to="/documentation/embedding?id=consolelog">consolelog</LinkBox><span>{`: false`}</span></Content>}>
+                    <ul>
+                        <li>一个布尔值设置项，用于定义 kepano 日志/跟踪消息是否也应该发送到浏览器 javascript 控制台。</li>
+                    </ul>
+                </Function>
+
+                <Function id="mwheel" header={<Content><LinkBox to="/documentation/embedding?id=mwheel">mwheel</LinkBox><span>{`: true`}</span></Content>}>
+                    <ul>
+                        <li>用于控制鼠标滚轮支持的布尔设置项</li>
+                        <li>当设置为 true （默认值）时，鼠标滚轮事件将被捕获并可在查看器中使用（例如用于缩放）。</li>
+                        <li>当设置成 false 时，任何鼠标滚轮的使用都将会被忽略，浏览器将执行其默认的鼠标滚轮处理（通常是滚动网页）。</li>
+                        <li>也可以在运行时使用 <LinkBox to="/documentation/xml?id=controlDisablewheel">control.disablewheel</LinkBox> 设置更改鼠标滚轮支持。</li>
+                    </ul>
+                </Function>
+
+                <Function id="capturetouch" header={<Content><LinkBox to="/documentation/embedding?id=capturetouch">capturetouch</LinkBox><span>{`: true`}</span></Content>}>
+                    <ul>
+                        <li>用于控制触摸事件捕获的布尔设置项</li>
+                        <li>当设置为 true （默认值）时，触摸事件将被捕获并可在查看器中使用（例如用于平移和缩放）。</li>
+                        <li>当设置成 false 时，触摸事件本身仍将会被查看器使用，但它们的默认事件处理不会停止。这意味着在这种情况下，浏览器可能会平移或缩放网页。</li>
+                        <li>也可以在运行时使用 <LinkBox to="/documentation/xml?id=controlCapturetouch">control.capturetouch</LinkBox> 设置更改触摸事件支持。</li>
+                    </ul>
+                </Function>
+
+                <Function id="focus" header={<Content><LinkBox to="/documentation/embedding?id=focus">focus</LinkBox><span>{`: true`}</span></Content>}>
+                    <ul>
+                        <li>一个布尔值设置，用于启动时为查看器提供 input/keyboard 焦点。</li>
+                        <li>未设置时，设置将根据查看器大小自动设置 - 当查看器覆盖整个网页时，焦点将设置为 true，否则设置为 false。</li>
+                    </ul>
+                </Function>
+
+                <Function id="webgl" header={<Content><LinkBox to="/documentation/embedding?id=webgl">webgl</LinkBox><span>{`: true`}</span></Content>}>
+                    <ul>
+                        <li>使用 <LinkBox to="">WebGL</LinkBox> 进行渲染（推荐）。</li>
+                        <li>可以使用 <LinkBox to="">CSS 3D-transforms</LinkBox> 代替 WebGL 来渲染全景图，但与使用 WebGL 相比，这会有很多限制。</li>
+                        <li>
+                            <Content>设置项：</Content>
+                            <ul>
+                                <li><Code>true</Code> - 仅使用 WebGL （默认）</li>
+                                <li><Code>false</Code> - 不使用 WebGL，始终使用 CSS 3D-transforms。</li>
+                                <li><Code>{`auto`}</Code> - 在可以使用 WebGL 时使用 WebGL，否则使用 CSS 3D-transforms。</li>
+                            </ul>
+                        </li>
+                        <li>当 WebGL 和 CSS 3D-transform 都不可用时，将显示一个<LinkBox to="/documentation/embedding?id=onerror">错误</LinkBox></li>
+                        <li>
+                            <Content>注意 - <Note>如果没有WebGL</Note>，这些功能将不可用：</Content>
+                            <ul>
+                                <li><LinkBox to="/documentation/xml?id=imageType">Spherical, Cylindrical and Fisheye Panos</LinkBox>（仅立方体和平面图）</li>
+                                <li><LinkBox to="/documentation/plugins/videoPlayer">Video-Panos</LinkBox></li>
+                                <li><LinkBox to="/documentation/xml?id=vireDistortion">Viewing Projections</LinkBox>（小行星视图）</li>
+                                <li><LinkBox to="/documentation/xml?id=depthmap">Depthmap / 3D-Model Panos</LinkBox></li>
+                                <li><LinkBox to="/documentation/actions?id=loadpanoBlend">Pano-blending modes</LinkBox></li>
+                                <li><LinkBox to="/documentation/xml?id=displayMipmapping">Mipmapping</LinkBox></li>
+                                <li><LinkBox to="/documentation/plugins/postprocessing">Postprocessing</LinkBox></li>
+                                <li><LinkBox to="/documentation/xml?id=hostpotChromakey">Chromakey</LinkBox> 和 <LinkBox to="/documentation/xml?id=hostpotAlphachannel">alphachannel</LinkBox> 热点</li>
+                                <li><LinkBox to="/documentation/xml?id=hostpotBlendmode">Hotspot blendmodes</LinkBox></li>
+                                <li><LinkBox to="/documentation/plugins/webvr">VR</LinkBox> 和 <LinkBox to="/documentation/xml?id=displayStereo">Stereo</LinkBox> 支持</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <Content>注意 - 取决于浏览器和设备，单个网页上的 WebGL 元素数量是有限的（例如，只有 8 个 WebGL 元素）。当请求更多 WebGL 元素时，最近最少使用的元素将被释放。</Content>
+                            <Content>在一个网页上放置多个全景图时需要考虑这一点。对于简单的 panos/tours，可以选择为此用例禁用 WebGL。</Content>
+                        </li>
+                    </ul>
+                </Function>
             </Content>
         </>
     )

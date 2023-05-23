@@ -235,6 +235,43 @@ export default () => {
                         </li>
                     </ul>
                 </Function>
+
+                <Function id="webxr" header={<Content><LinkBox to="/documentation/embedding?id=webxr">webxr</LinkBox><span>{`: 'auto'`}</span></Content>}>
+                    <ul>
+                        <li>控制<LinkBox to="/documentation/plugins/webvr">WebXR API</LinkBox>的支持。</li>
+                        <li>为了使用 WebXR API，需要在启动时执行几个初始化设置，因此在嵌入查看器的时候需要定义 WebXR API 的使用。</li>
+                        <li>
+                            <Content>可用设置：</Content>
+                            <ul>
+                                <li>
+                                    <Content><Code>auto</Code>（默认）</Content>
+                                    <ul>
+                                        <li>仅在桌面浏览器和专用 VR 系统/浏览器中使用 WebXR API。在 Android 移动设备中，可代替的 krpano MobileVR 支持目前具有更好和更广泛的设备支持</li>
+                                        <li>当 WebVR API 和 WebXR API 同时可用时，则首选 WebVR API。截至目前为止，WebVR API 仍然是更好的选择，它允许通过采样来获得更好的图像质量和特定于设备的性能优化。WebXR API 目前无法事项这两种功能，最终未来的 API 版本和浏览器可能会变得更好。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <Content><Code>preferwebvr</Code></Content>
+                                    <ul>
+                                        <li>当 WebVR API 和 WebXR API 同时可用时，首选 <Note>WebVR API</Note>。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <Content><Code>prefer</Code> 或者 <Code>true</Code></Content>
+                                    <ul>
+                                        <li>当 WebVR API 和 WebXR API 同时可用时，首选 <Note>WebXR API</Note>。</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <Content><Code>no</Code> 或者 <Code>false</Code></Content>
+                                    <ul>
+                                        <li>禁用 WebXR API，始终使用 WebVR API 或者 krpano MobileVR 支持显示 VR 显示。</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </Function>
             </Content>
         </>
     )

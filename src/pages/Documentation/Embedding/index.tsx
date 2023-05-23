@@ -6,6 +6,7 @@ import LinkBox from "../../../components/Link";
 import Function from "../../../components/Function";
 import { useSearchParams } from "react-router-dom";
 import Note from "../../../components/Note";
+import { CodeBox } from "../../../components/Code/styled";
 export default () => {
     const [search, setSearch] = useSearchParams();
     const id = search.get('id')
@@ -350,6 +351,74 @@ export default () => {
                     <ul>
                         <li>onerror 设置可用于设置自定义嵌入错误处理函数。</li>
                         <li>将使用错误消息字符串作为参数调用指定函数。</li>
+                    </ul>
+                </Function>
+
+                <Function id="passQueryParameters" header={<Content><LinkBox to="/documentation/embedding?id=passQueryParameters">passQueryParameters</LinkBox><span>{`: false`}</span></Content>}>
+                    <ul>
+                        <li>通过该设置，可以将 http 查询参数作为变量从 url 传递/重定向到 krpano 查看器中。</li>
+                        <li>
+                            <Content>可能的值：</Content>
+                            <ul>
+                                <li>
+                                    <Content><Code>true</Code> - 将所有参数传递给查看器。</Content>
+                                </li>
+                                <li>
+                                    <Content><Code>false</Code> - 不传递任何参数（默认）。</Content>
+                                </li>
+                                <li>
+                                    <Content><Code>'param1,param2,param3,...'</Code> - 定义允许传递的都好分隔参数的自定义列表。</Content>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <Content>使用示例：</Content>
+                            <Code code={true}>{`tour.html?startscene=scene2&initvars.design=flat`}</Code>
+                        </li>
+                        <li>
+                            <Content><Note>安全告警：</Note></Content>
+                            <Content><Note>当允许传递所有参数（设置为 true）或可以包含可执行代码的参数时，可能会有打开<LinkBox to="">跨站点脚本</LinkBox>，这是否会有危险取决于用户用力和包含的网站内容</Note></Content>
+                        </li>
+                    </ul>
+                </Function>
+            </Content>
+
+            <Content id="removing">
+                <Title level={2}>删除查看器</Title>
+                <Content>有两种方法可以从页面正确的删除 krpano 查看器并卸载/释放所有分配给它的资源：</Content>
+
+                <Function id="removepano" header={<Content><LinkBox to="/documentation/embedding?id=removepano">removepano</LinkBox><span>{`(id):`}</span></Content>}>
+                    <ul>
+                        <li>可以使用 html <LinkBox to="/documentation/embedding?id=target">target</LinkBox> 元素的 ID 或嵌入期间定义的唯一 ID 来调用 {`removepano()`} 函数。</li>
+                        <li>
+                            <Content>示例：</Content>
+                            <Code code={true}>
+                                <Content>{`embedpano({target: 'panoDIV'})`}</Content>
+                                <Content>{`...`}</Content>
+                                <Content>{`removepano('panoDIV')`}</Content>
+                            </Code>
+                            <Content>或</Content>
+                            <Code code={true}>
+                            <Content>{`embedpano({target: 'panoDIV', id: 'pano1'})`}</Content>
+                                <Content>{`...`}</Content>
+                                <Content>{`removepano('pano1')`}</Content>
+                            </Code>
+                        </li>
+                    </ul>
+                </Function>
+
+                <Function id="krpanoUnload" header={<Content><LinkBox to="/documentation/embedding?id=krpanoUnload">krpano.unload</LinkBox><span>{`():`}</span></Content>}>
+                    <ul>
+                        <li>当有一个 <LinkBox to="/documentation/plugins?id=krpanoInterface">krpano 接口对象</LinkBox>（例如来自<LinkBox to="/documentation/embedding?id=onready">onready</LinkBox>回调）时，也可以调用它的<LinkBox to="/documentation/plugins?id=unload">unload（）</LinkBox>函数来删除 krpano 查看器。</li>
+                        <li>
+                            <Content>示例：</Content>
+                            <Code code={true}>
+                                <Content>{`embedpano({target: 'id-of-your-div', onready: function(krpano) {`}</Content>
+                                <Content>&emsp;{`...`}</Content>
+                                <Content>&emsp;{`krpano.unload();`}</Content>
+                                <Content>{`}})`}</Content>
+                            </Code>
+                        </li>
                     </ul>
                 </Function>
             </Content>

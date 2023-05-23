@@ -10,4 +10,9 @@ export enum Functions {
     safearea = '/documentation/embedding?id=safearea',
     touchdevicemousesupport = '/documentation/embedding?id=touchdevicemousesupport',
     fakedevice = '/documentation/embedding?id=fakedevice',
+    onready = '/documentation/embedding?id=onready',
+    onerror = '/documentation/embedding?id=onerror',
+    passQueryParameters = '/documentation/embedding?id=passQueryParameters',
+    removepano = '/documentation/embedding?id=removepano',
+    krpanoUnload = '/documentation/embedding?id=krpanoUnload',
 }

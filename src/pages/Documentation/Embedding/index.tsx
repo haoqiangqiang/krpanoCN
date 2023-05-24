@@ -77,6 +77,7 @@ export default () => {
                 <Title level={2}>嵌入参数</Title>
                 <Content>embedpano（）函数需要一个 javascript 对象作为参数，该对象可以通过 参数名: 值 （key: 'value'）的形式来传递所有的参数（以随机顺序）。几乎所有的参数（target 参数除外）都是可选的，当没有进行配置时，将使用默认值。</Content>
                 <Content>参数提供以下配置项：</Content>
+                
                 <Function id="xml" header={<Content><LinkBox to="/documentation/embedding?id=xml">xml</LinkBox><span>{`: 'krpano.xml'`}</span></Content>}>
                     <Content>
                         <ul>
@@ -206,6 +207,9 @@ export default () => {
                             <Content>注意 - 取决于浏览器和设备，单个网页上的 WebGL 元素数量是有限的（例如，只有 8 个 WebGL 元素）。当请求更多 WebGL 元素时，最近最少使用的元素将被释放。</Content>
                             <Content>在一个网页上放置多个全景图时需要考虑这一点。对于简单的 panos/tours，可以选择为此用例禁用 WebGL。</Content>
                         </li>
+                    </ul>
+                </Function>
+
                 <Function id="webglsettings" header={<Content><LinkBox to="/documentation/embedding?id=webglsettings">webglsettings</LinkBox><span>{`: {preserveDrawingBuffer: false, depth: true, stencil: true, ...}`}</span></Content>}>
                     <ul>
                         <li>为 WebGL 上下文的创建传递具有特殊参数设置的对象</li>
@@ -399,7 +403,7 @@ export default () => {
                             </Code>
                             <Content>或</Content>
                             <Code code={true}>
-                            <Content>{`embedpano({target: 'panoDIV', id: 'pano1'})`}</Content>
+                                <Content>{`embedpano({target: 'panoDIV', id: 'pano1'})`}</Content>
                                 <Content>{`...`}</Content>
                                 <Content>{`removepano('pano1')`}</Content>
                             </Code>
